@@ -1,57 +1,69 @@
+"""LCD:
+sysex (hex) F0 00 20 32 dd 4C nn cc c1 .. c14 F7
+    dd: device id (X-Touch: 0x14, X-Touch-Ext: 0x15)
+    nn: LCD number 0..7
+    cc: bits 0-2: backlight color (black, red, green, yellow, blue, magenta, cyan, white)
+    cc: bit 4: invert upper half of LCD
+    cc: bit 5: invert lower half of LCD
+    c1..c14: ascii characters (1..7: upper half, 8..14: lower half)
+so for:
+    'hello
+     world'
+F0 00 20 32 dd 4C nn cc a1 a2 a3 a4 a5 a6 a7 b1 b2 b3 b4 b5 b6 b7 F7
+F0 00 20 32 14 4C 00 20 00 48 65 6c 6c 6f 00 00 57 6f 72 6c 64 00 F7
+                        _  H  e  l  l  o  _  _  W  o  r  l  d  _
+"""
+
+"""Segment Displays:
+sysex (hex) F0 00 20 32 dd 37 s1 .. s12 d1 d2 F7
+    dd: device id (X-Touch: 0x14, X-Touch-Ext: 0x15)
+    s1..s12: segment data (bit 0: segment a, .. bit 6: segment g)
+    d1: dots for displays 1..7 (bit 0: display 1, .. bit 6: display 7)
+    d2: dots for displays 8..12 (bit 0: display 8, .. bit 4: display 12)
+
+    0bABCDEFG0
+     AA
+    F  B
+    F  B
+     GG
+    E  C
+    E  C
+     DD
+
+so for 012345678901 with alternating dots on the displays:
+F0 00 20 32 dd 37 s1 .. s12 d1 d2 F7
+F0 00 20 32 14 47 7E 0C B6 9E CC DA FA 0E FE DE 7E 0C AA A8 F7
+                  0  1  2  3  4  5  6  7  8  9  0  1  .  .
+"""
+# print(hex(0b01111110))
+# print(hex(0b00001100))
+# print(hex(0b10110110))
+# print(hex(0b10011110))
+# print(hex(0b11001100))
+# print(hex(0b11011010))
+# print(hex(0b11111010))
+# print(hex(0b00001110))
+# print(hex(0b11111110))
+# print(hex(0b11011110))
+# print(hex(0b10101000))
+
 import rtmidi
 
-# Get the available MIDI input ports
-midi_in = rtmidi.MidiIn()
-available_ports = midi_in.get_ports()
 
-# Display the available MIDI input ports
-print("Available MIDI input ports:")
-for i, port_name in enumerate(available_ports):
-    print(f"{i+1}. {port_name}")
+def main():
+    midi_in  = rtmidi.MidiIn()
+    midi_out = rtmidi.MidiOut()
 
-# Prompt the user to choose a MIDI input port
-input_port_index = int(input("Choose a MIDI input port: ")) - 1
-if input_port_index < 0 or input_port_index >= len(available_ports):
-    print("Invalid input port index!")
-    exit()
+    print("MIDI input ports:")
+    ports_in = midi_in.get_ports()
+    for i, name in enumerate(ports_in):
+        print(f"{i + 1}. {name}")
 
-# Open the chosen MIDI input port
-midi_in.open_port(input_port_index)
+    print("MIDI output ports:")
+    ports_out = midi_out.get_ports()
+    for i, name in enumerate(ports_out):
+        print(f"{i + 1}. {name}")
 
-# Get the available MIDI output ports
-midi_out = rtmidi.MidiOut()
-available_ports = midi_out.get_ports()
 
-# Display the available MIDI output ports
-print("Available MIDI output ports:")
-for i, port_name in enumerate(available_ports):
-    print(f"{i+1}. {port_name}")
-
-# Prompt the user to choose a MIDI output port
-output_port_index = int(input("Choose a MIDI output port: ")) - 1
-if output_port_index < 0 or output_port_index >= len(available_ports):
-    print("Invalid output port index!")
-    exit()
-
-# Open the chosen MIDI output port
-midi_out.open_port(output_port_index)
-
-# MIDI input callback function
-def midi_input_callback(message, time_stamp):
-    print(f"MIDI received: {message} at time {time_stamp}")
-    # Process the received MIDI message as desired
-
-# Set the callback function for MIDI input
-midi_in.set_callback(midi_input_callback)
-
-# Send MIDI messages to the chosen MIDI output port
-message = [0x90, 60, 100]  # Example MIDI note on message
-midi_out.send_message(message)
-
-# Keep the program running until interrupted
-while True:
-    pass
-
-# Cleanup
-midi_in.close_port()
-midi_out.close_port()
+if __name__ == '__main__':
+    main()
