@@ -3,3 +3,4 @@ include/
 lib64
 lib/
 pyvenv.cfg
+__pycache__/
