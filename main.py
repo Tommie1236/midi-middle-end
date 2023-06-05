@@ -1,68 +1,122 @@
-from prettyprinter import pprint
 from termcolor import colored
-import pygame
 import pygame.midi
+import pygame
+import time
 
 
+def debounce(lst):
+    result = []
+    for i in range(len(lst)):
+        if i == 0 or lst[i] != lst[i-1]:
+            result.append(lst[i])
+    return result
 
-devices_info = {
-		'x-touch-in':   (None, None),
-		'x-touch-out':  (None, None),
-		'loopmidi-in':  (None, None),
-		'loopmidi-out': (None, None)
-		}
+class XTouch:
+
+	def __init__ (self, ip_port, op_port):
+		self.input  : pygame.midi.Input  = pygame.midi.Input (ip_port)
+		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
+
+	def send_midi(self, type, data):
+		types = {
+			'note_on': 0x90,
+			'note_off': 0x80,
+			'control_change': 0xb0}
+		try:
+			self.output.write([[[types[type], *data], pygame.midi.time()]])
+		except:
+			self.error(f'midi data <{[type, *data]}> not send')
 
 
-def midi_connect() -> None:
-
-	dev_count = pygame.midi.get_count()
-	if dev_count == 0:
-		print("No MIDI devices found.")
-		return
-
-	print("Available MIDI devices:")
-	for i in range(dev_count):
-		device_info = pygame.midi.get_device_info(i)
-		device_name = device_info[1].decode("utf-8")
-		print(f"[{i}] - {device_name}")
+	def send_sysex(self, data):
+		...
 	
+	def get_data(self) -> list:
+		types = {
+			0x90: 'note_on',
+			0x80: 'note_off',
+			0xb0: 'control_change'}
+
+		data_in = self.input.read(10)
+		data= []
+		for d in data_in:
+			m = d[0]
+			t = types[m[0]]
+
+			data.append([t, *m[1:]])
+		return debounce(data)
+			
+	def led_on(self, number):
+		if number > 0 and number <= 93:
+			self.send_midi('note_on', [number+8, 127])
+		else:
+			self.warning(f'Button <{number}> is not valid, must be greater than 0 and cant be greater than 93')
+
+	def error(self, message):
+		print(colored(f'ERROR: {message}', 'white', 'on_red'))
+
+	def warning(self, message):
+		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
+
+class MyDmx:
+	def __init__(self, ip_port, op_port):
+		self.input  : pygame.midi.Input  = pygame.midi.Input (ip_port)
+		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
+		
+
+	def send_midi(self, type, data):
+		types = {
+			'note_on': 0x90,
+			'note_off': 0x80,
+			'control_change': 0xb0}
+		try: 
+			self.output.write([[[types[type], *data], pygame.midi.time()]])
+		except:
+			self.error(f'midi data <{[type, *data]}> not send')
+
+	def get_data(self) -> list:
+		types = {
+			0x90: 'note_on',
+			0x80: 'note_off',
+			0xb0: 'control_change'}
+		
+		data_in = self.input.read(10)
+		data= []
+		for d in data_in:
+			m = d[0]
+			t = types[m[0]]
+
+			data.append([t, *m[1:]])
+		
+		return debounce(data)
+
+	def error(self, message):
+		print(colored(f'ERROR: {message}', 'white', 'on_red'))
+
+	def warning(self, message):
+		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
+
+
+pygame.init()
+pygame.midi.init()
+xt = XTouch(1,6)
+md = MyDmx(3,8)
+
+# for i in range(127):
+#     xt.send_midi('note_on', [i, 127])
+#     xt.send_midi('control_change', [i, 127])
+#     time.sleep(.1)
+
+
+# print(debounce([3, 3, 3, 4, 6, 6, 7]))
+
+while True:
+	d = xt.get_data()
+	if d: print(d)
+	for m in d:
+		md.send_midi(m[0], m[1:])
 	
-	for port, io in [('x-touch-in', 'in'), ('x-touch-out', 'out'), ('loopmidi-in', 'in'), ('loopmidi-out', 'out')]:
-		while True:
-			try:
-				dev_idx = int(input(f'Enter index of <{port}>: '))
-				if 0 <= dev_idx < dev_count:
-					break
-				else:
-					print('Invalid device index. Please try again.')
-			except ValueError:
-				print('Invalid input. Please enter a valid device index.')
-
-		if io == 'in': 		devices_info[port][0] = pygame.midi.Input(dev_idx)
-		elif io == 'out':	devices_info[port][0] = pygame.midi.Output(dev_idx)
-		else:				print(f'i/o method <{io}> not valid.')
-		
-		devices_info[port][1] = dev_idx
-
-
-
-if __name__ == '__main__':
-	try:
-		pygame.init()
-		pygame.midi.init()
-
-		midi_connect()
-		print('\ndevices_info:')
-		pprint(devices_info)
-
-	except KeyboardInterrupt:
-		pass
-	finally:
-		
-		if devices_info['x-touch-in'][0]: devices_info['x-touch-in'][0].close()
-		if devices_info['x-touch-out'][0]: devices_info['x-touch-out'][0].close()
-		if devices_info['loopmidi-in'][0]: devices_info['loopmidi-in'][0].close()
-		if devices_info['loopmidi-out'][0]: devices_info['loopmidi-out'][0].close()
-
-		pygame.midi.quit()
-		pygame.quit()
+	e = md.get_data()
+	if e: print(e)
+	for m in e:
+		xt.send_midi(m[0], m[1:])
