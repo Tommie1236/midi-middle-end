@@ -33,9 +33,9 @@ class XTouch:
 		except:
 			self.error(f'midi data <{[type, *data]}> not send')
 
-
-	def send_sysex(self, data):
-		raise(NotImplementedError)
+	def send_sysex(self, *datas):
+		for data in datas:
+			self.output.write_sys_ex(pygame.midi.time(), data)
 	
 	def get_data(self) -> list:
 		types = {
@@ -75,8 +75,14 @@ class XTouch:
 		for i in range(94):
 			self.led_off(i)
 
-
+	def led_all_on(self):
+		for i in range(94):
+			self.led_on(i)
 	
+	def all_faders_up(self):
+		for i in range(10):
+			self.send_midi('control_change', [i + 70, 127])
+			time.sleep(.1)
 
 	def error(self, message):
 		print(colored(f'ERROR: {message}', 'white', 'on_red'))
@@ -128,28 +134,24 @@ class MyDmx:
 
 
 
-
-
-
 if __name__ == '__main__':
 	try:
 		pygame.init()
 		pygame.midi.init()
 
 		xt = XTouch(1,6)
-		md = MyDmx(3,8)
+		md = MyDmx(4,8)
 		# uncomment below if you want to launch mydmx
 		# os.startfile(r'C:\Users\Licht computer\Desktop\licht-files\aula_v_8.0.dvc')
-		
-		# for i in range(94):
-		# 	xt.led_on(i)
-		# 	time.sleep(.1)
 
+		xt.led_all_on()
+		xt.all_faders_up()
+		time.sleep(1)
 		xt.reset_controls()
 		
 		while True:
 			d = xt.get_data()
-			#if d: print(d)
+			if d: print(d)
 			for m in d:
 				md.send_midi(m[0], m[1:])
 			
@@ -168,5 +170,5 @@ if __name__ == '__main__':
 		pygame.midi.quit()
 		pygame.quit()
 		# uncomment below if you want the mydmx closing warnings
-		# os.system(r'msg * Please close and save changes in the MyDMX software')
-		# print(colored('Please close and save changes in the MyDMX software.', 'white', 'on_red'))
+		os.system(r'msg * Please close and save changes in the MyDMX software')
+		print(colored('Please close and save changes in the MyDMX software.', 'white', 'on_red'))
