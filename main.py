@@ -99,6 +99,7 @@ class MyDmx:
 
 pygame.init()
 pygame.midi.init()
+
 xt = XTouch(1,6)
 md = MyDmx(3,8)
 
