@@ -1,10 +1,10 @@
 from termcolor import colored
 # import subprocess
+from segments import SEGMENTS # 7-segment data
 import pygame.midi
 import pygame
 import os
 import time
-
 
 def debounce(lst):
 	result = []
@@ -18,25 +18,54 @@ class XTouch:
 	def __init__ (self, ip_port, op_port):
 		self.input  : pygame.midi.Input  = pygame.midi.Input (ip_port)
 		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
+		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+		self.dots = [0b0000000, 0b00000]
 
 	def close(self):
 		self.input.close()
 		self.output.close()
 
-	def send_midi(self, type, data):
+	def send_midi(self, type: str, data: list):
 		types = {
 			'note_on': 0x90,
 			'note_off': 0x80,
 			'control_change': 0xb0}
-		try:
-			self.output.write([[[types[type], *data], pygame.midi.time()]])
-		except:
-			self.error(f'midi data <{[type, *data]}> not send')
+		if type.lower() == 'sysex':
+			self.send_sysex(data)
+		else:
+			try:
+				self.output.write([[[types[type.lower()], *data], pygame.midi.time()]])
+			except:
+				self.error(f'midi data <{[type, *data]}> not send')
 
-	def send_sysex(self, *datas):
-		for data in datas:
+	def send_sysex(self, data):
 			self.output.write_sys_ex(pygame.midi.time(), data)
 	
+	def update_segment_display(self):
+		print(self.segments)
+		self.send_sysex([0xf0, 0x00, 0x20, 0x32, 0x14, 0x37, *self.segments, *self.dots, 0xf7])
+
+	def set_segment_data(self, idx: int, chars: str):
+		'''
+		sets the segment data to something
+		args: 
+		- idx, the index of the segment you want to updated. (0-11)
+		- chars, the charachers you want to put 
+		'''
+		if idx < 0 or idx > 11:
+			self.error(f'segment index <{idx}> out of range, needs to be 0-11.')
+			return False
+		if idx + len(chars) > 12:
+			self.warning(f"chars: <{chars}> doesn't fit in the display, characthers are cut off.")
+		for char in chars:
+			char = char.lower()
+			if char in SEGMENTS.keys():
+				self.segments[idx] = SEGMENTS[char]
+			else:
+				self.warning(f'char <{char}> not a valid segment characther')
+			idx += 1
+
+
 	def get_data(self) -> list:
 		types = {
 			0x90: 'note_on',
@@ -80,7 +109,7 @@ class XTouch:
 			self.led_on(i)
 	
 	def all_faders_up(self):
-		for i in range(10):
+		for i in range(20):
 			self.send_midi('control_change', [i + 70, 127])
 			time.sleep(.1)
 
@@ -99,7 +128,6 @@ class MyDmx:
 		self.input.close()
 		self.output.close()
 		
-
 	def send_midi(self, type, data):
 		types = {
 			'note_on': 0x90,
@@ -144,11 +172,16 @@ if __name__ == '__main__':
 		# uncomment below if you want to launch mydmx
 		# os.startfile(r'C:\Users\Licht computer\Desktop\licht-files\aula_v_8.0.dvc')
 
+		# startup sequence
 		xt.led_all_on()
 		xt.all_faders_up()
-		time.sleep(1)
+		time.sleep(.5)
 		xt.reset_controls()
+
+		xt.set_segment_data(0, '0123456789ab')
+		xt.update_segment_display()
 		
+		# just send everyting to the other midi port
 		while True:
 			d = xt.get_data()
 			if d: print(d)
@@ -159,16 +192,16 @@ if __name__ == '__main__':
 			if e: print(e)
 			for m in e:
 				xt.send_midi(m[0], m[1:])
-	# except:
-	# 	pass
+
 	finally:
 		try:
 			xt.close()
 			md.close()
 		except:
 			pass
-		pygame.midi.quit()
-		pygame.quit()
-		# uncomment below if you want the mydmx closing warnings
-		os.system(r'msg * Please close and save changes in the MyDMX software')
-		print(colored('Please close and save changes in the MyDMX software.', 'white', 'on_red'))
+		finally:
+			pygame.midi.quit()
+			pygame.quit()
+			# uncomment below if you want the mydmx closing warnings
+			# os.system(r'msg * Please close and save changes in the MyDMX software')
+			# print(colored('Please close and save changes in the MyDMX software.', 'white', 'on_red'))
