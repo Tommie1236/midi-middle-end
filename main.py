@@ -20,6 +20,8 @@ class XTouch:
 		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
 		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 		self.dots = [0b0000000, 0b00000]
+		self.banknr = 0
+		self.mode = 'channel'
 
 	def close(self):
 		self.input.close()
@@ -42,8 +44,12 @@ class XTouch:
 			self.output.write_sys_ex(pygame.midi.time(), data)
 	
 	def update_segment_display(self):
-		print(self.segments)
+		# print(self.segments)
 		self.send_sysex([0xf0, 0x00, 0x20, 0x32, 0x14, 0x37, *self.segments, *self.dots, 0xf7])
+
+	def clear_segments_display(self):
+		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
+		self.update_segment_display()
 
 	def set_segment_data(self, idx: int, chars: str):
 		'''
@@ -52,19 +58,38 @@ class XTouch:
 		- idx, the index of the segment you want to updated. (0-11)
 		- chars, the charachers you want to put 
 		'''
+		if not isinstance(idx, int):
+			self.warning(f'index needs to be a integer.')
 		if idx < 0 or idx > 11:
 			self.error(f'segment index <{idx}> out of range, needs to be 0-11.')
 			return False
 		if idx + len(chars) > 12:
 			self.warning(f"chars: <{chars}> doesn't fit in the display, characthers are cut off.")
 		for char in chars:
+			if idx > 11:
+				break
 			char = char.lower()
 			if char in SEGMENTS.keys():
 				self.segments[idx] = SEGMENTS[char]
 			else:
 				self.warning(f'char <{char}> not a valid segment characther')
 			idx += 1
+		self.update_segment_display()
 
+	def update_bank(self, change):
+		self.banknr += change
+		if self.banknr < 0: self.banknr = 99
+		if self.banknr > 99: self.banknr = 0
+		self.set_segment_data(0, f'{self.banknr:02d}')
+		print(colored(f'Bank set to: {self.banknr:02d}', 'green'))
+
+	def set_bank_nr(self, number):
+		self.banknr = number
+		self.set_segment_data(0, f'{self.banknr:02d}')
+
+	def update_mode(self, mode):
+		self.mode = mode
+		self.set_segment_data(2, f'{mode:7}')
 
 	def get_data(self) -> list:
 		types = {
@@ -160,6 +185,25 @@ class MyDmx:
 	def warning(self, message):
 		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
 
+class BPM:
+	def __init__(self):
+		self.bpm = 0
+		self.maxdata = 2
+		self.data = []
+
+	def bpm_pulse(self):
+		self.data.append(time.time())
+		self.data = self.data[-self.maxdata:]
+
+	def calculate_bpm(self) -> int:
+		between = round((self.data[-1]	- self.data[0]), 2)
+		try:
+			self.bpm = int((1 / between) * 60)
+			# print(f'{between:5} {len(self.data):2} {self.bpm} {self.data}')
+		except: pass
+		return f'{self.bpm:03d}'
+	
+
 
 
 if __name__ == '__main__':
@@ -169,32 +213,63 @@ if __name__ == '__main__':
 
 		xt = XTouch(1,6)
 		md = MyDmx(4,8)
+		bpm = BPM()
+		bpm.bpm_pulse()
 		# uncomment below if you want to launch mydmx
 		# os.startfile(r'C:\Users\Licht computer\Desktop\licht-files\aula_v_8.0.dvc')
 
 		# startup sequence
 		xt.led_all_on()
 		xt.all_faders_up()
+		xt.set_segment_data(0, '0123456789ab')
 		time.sleep(.5)
 		xt.reset_controls()
+		xt.clear_segments_display()
 
-		xt.set_segment_data(0, '0123456789ab')
+		xt.set_bank_nr(0)
+
+
 		xt.update_segment_display()
 		
 		# just send everyting to the other midi port
 		while True:
 			d = xt.get_data()
-			if d: print(d)
-			for m in d:
-				md.send_midi(m[0], m[1:])
-			
+			if d:
+				print(d)
+				for m in d:
+					if m[0] == 'note_on' and m[2] == 127:
+						match m[1]:
+							case 92:	# bankdown button
+								xt.update_bank(-1)
+								continue
+							case 93:	# bankup button
+								xt.update_bank(1)
+								continue
+							case 94:	# channels button
+								xt.update_mode('channel')	
+								continue
+							case 95: 	# presets button
+								xt.update_mode('presets')
+								continue
+							case 101:	# bpm button
+								bpm.bpm_pulse()
+								xt.set_segment_data(9, bpm.calculate_bpm())
+								continue
+
+
+					# md.send_midi(m[0], m[1:]) # uncomment to send all midi data to mydmx3
+
 			e = md.get_data()
-			if e: print(e)
-			for m in e:
-				xt.send_midi(m[0], m[1:])
+			if e:
+				print(e)
+				for m in e:
+					...
+					# xt.send_midi(m[0], m[1:]) # uncomment to send all midi data to x-touch
 
 	finally:
 		try:
+			xt.clear_segments_display()
+			xt.reset_controls()
 			xt.close()
 			md.close()
 		except:
