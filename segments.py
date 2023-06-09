@@ -29,9 +29,12 @@ SEGMENTS = {
     't': 0b1111000,
     'u': 0b0011100,
     'x': 0b1110110,
-    'y': 0b1101110,
-    'z': 0b1011011
+    'y': 0b1101110
 }
 
 # the below are not possible
-# k, m, v, w
+# k, m, v, w, z
+# some are possible but are the same as others
+# like v or w, they are the same as u
+# and z it is the same as 2
+# the letters k and m are just not possible 
