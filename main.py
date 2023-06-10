@@ -102,6 +102,17 @@ class XTouch:
 			char = char.lower()
 			if char in SEGMENTS.keys():
 				self.segments[idx] = SEGMENTS[char]
+				# first clear the dot at a specified index
+				if idx < 7:
+					self.dots[0] &= 0b0 << idx
+				else:
+					self.dots[1] &= 0b0 << (idx - 7)
+			elif char == '.': 	# then activate the dot if it needs to
+				if idx < 7:
+					self.dots[0] |= 0b1 << idx
+				else:
+					self.dots[1] |= 0b1 << (idx - 7)
+				continue	# skip incrementing the idx var to not skip the next segment because the dot is in the same segment as the last char
 			else:
 				self.warning(f'char <{char}> not a valid segment characther')
 			idx += 1
