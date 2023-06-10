@@ -3,6 +3,7 @@ from termcolor import colored
 from segments import SEGMENTS # 7-segment data
 import pygame.midi
 import pygame
+import argparse
 import os
 import time
 
@@ -12,6 +13,36 @@ def debounce(lst):
 		if i == 0 or lst[i] != lst[i-1]:
 			result.append(lst[i])
 	return result
+
+def setup_midi():
+	dev_count = pygame.midi.get_count()
+	if dev_count == 0: print('No MIDI devices found, exiting program.'); exit()
+
+	print('Available MIDI devices:')
+	for i in range(dev_count):
+		print(f'[{i:2}] - {pygame.midi.get_device_info(i)[1].decode("utf-8")}')
+	
+	ports = []
+	for port in [('x-touch-in', 'in'), ('x-touch-out', 'out'), ('MyDmx-in (mydmx - python)', 'in'), ('MyDmx-out (python - mydmx)', 'out')]:
+		while True:
+			try:
+				i = int(input(f'Enter index of <{port}>: '))
+				if 0 <= i < dev_count:
+					ports[port] = i
+					break
+				else:
+					print('Invalid MIDI device index. Try again.')
+			except ValueError:
+				print('Invalid index input. Please enter a valid index (integer).')
+		return tuple(ports)
+		
+
+	
+
+def setup_argparser():
+	parser = argparse.ArgumentParser()
+	parser.add_argument('-d', "--default-ports", action='store_true', help='use the default midi ports (xtouch 1, 6 mydmx 4, 8)') 
+	return parser.parse_args()
 
 class XTouch:
 
@@ -27,25 +58,25 @@ class XTouch:
 		self.input.close()
 		self.output.close()
 
-	def send_midi(self, type: str, data: list):
+	def _send_midi(self, type: str, data: list):
 		types = {
 			'note_on': 0x90,
 			'note_off': 0x80,
 			'control_change': 0xb0}
 		if type.lower() == 'sysex':
-			self.send_sysex(data)
+			self._send_sysex(data)
 		else:
 			try:
 				self.output.write([[[types[type.lower()], *data], pygame.midi.time()]])
 			except:
 				self.error(f'midi data <{[type, *data]}> not send')
 
-	def send_sysex(self, data):
+	def _send_sysex(self, data):
 			self.output.write_sys_ex(pygame.midi.time(), data)
 	
 	def update_segment_display(self):
 		# print(self.segments)
-		self.send_sysex([0xf0, 0x00, 0x20, 0x32, 0x14, 0x37, *self.segments, *self.dots, 0xf7])
+		self._send_sysex([0xf0, 0x00, 0x20, 0x32, 0x14, 0x37, *self.segments, *self.dots, 0xf7])
 
 	def clear_segments_display(self):
 		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
@@ -108,20 +139,20 @@ class XTouch:
 			
 	def reset_controls(self):
 		for i in range(119):
-			self.send_midi('note_on', [i, 0])
-			self.send_midi('control_change', [i, 0])
+			self._send_midi('note_on', [i, 0])
+			self._send_midi('control_change', [i, 0])
 
 	def led_on(self, *numbers):
 		for number in numbers:
 			if number >= 0 and number <= 93:
-				self.send_midi('note_on', [number+8, 127])
+				self._send_midi('note_on', [number+8, 127])
 			else:
 				self.warning(f'Button <{number}> is not valid, must be greater than 0 and cant be greater than 93')
 	
 	def led_off(self, *numbers):
 		for number in numbers:
 			if number >= 0 and number <= 93:
-				self.send_midi('note_on', [number+8, 0])
+				self._send_midi('note_on', [number+8, 0])
 			else:
 				self.warning(f'Button <{number}> is not valid, must be greater than 0 and cant be greater than 93')
 		
@@ -135,7 +166,7 @@ class XTouch:
 	
 	def all_faders_up(self):
 		for i in range(20):
-			self.send_midi('control_change', [i + 70, 127])
+			self._send_midi('control_change', [i + 70, 127])
 			time.sleep(.1)
 
 	def error(self, message):
@@ -153,7 +184,7 @@ class MyDmx:
 		self.input.close()
 		self.output.close()
 		
-	def send_midi(self, type, data):
+	def _send_midi(self, type, data):
 		types = {
 			'note_on': 0x90,
 			'note_off': 0x80,
@@ -208,11 +239,19 @@ class BPM:
 
 if __name__ == '__main__':
 	try:
+		args = setup_argparser()
 		pygame.init()
 		pygame.midi.init()
-
-		xt = XTouch(1,6)
-		md = MyDmx(4,8)
+		if args.default_ports:
+			print(colored('Using default MIDI ports: (xtouch 1, 6 mydmx 4, 8).', 'white', 'on_green'))
+			xt = XTouch(1,6)
+			md = MyDmx (4,8)
+		else:
+			ports: tuple = setup_midi()
+			print(ports)
+			exit()
+			xt = XTouch(*ports[0:2])
+			md = MyDmx (*ports[2:4])
 		bpm = BPM()
 		bpm.bpm_pulse()
 		# uncomment below if you want to launch mydmx
@@ -257,14 +296,14 @@ if __name__ == '__main__':
 								continue
 
 
-					# md.send_midi(m[0], m[1:]) # uncomment to send all midi data to mydmx3
+					# md._send_midi(m[0], m[1:]) # uncomment to send all midi data to mydmx3
 
 			e = md.get_data()
 			if e:
 				print(e)
 				for m in e:
 					...
-					# xt.send_midi(m[0], m[1:]) # uncomment to send all midi data to x-touch
+					# xt._send_midi(m[0], m[1:]) # uncomment to send all midi data to x-touch
 
 	finally:
 		try:
