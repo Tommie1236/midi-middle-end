@@ -12,6 +12,7 @@ KEYS = {96: 'up',
 		97: 'down',
 		98: 'left',
 		99: 'right'}
+ENCODERS = [0, 0, 0 ,0 ,0 ,0 ,0 ,0]
 
 
 
@@ -335,7 +336,7 @@ if __name__ == '__main__':
 							elif m[2] == 0:
 								xt.led_off(m[1] - 8)
 								keyboard.release(KEYS[m[1]])
-								
+
 					if m[0] == 'control_change':
 						match m[1]:
 							case 64:
@@ -345,7 +346,15 @@ if __name__ == '__main__':
 									bpm.calculate_bpm()
 								elif m[2] in [127, 175]:
 									xt.led_off(93)
+						if m[1] in [80, 81, 82, 83, 84, 85, 86, 87]:
+							if m[2] == 1:
+								ENCODERS[m[1] - 80] -= 9
+							elif m[2] == 65:
+								ENCODERS[m[1] - 80] += 9
 
+							print(ENCODERS)
+							ENCODERS = [max(0, min(value, 127)) for value in ENCODERS] # cap the values in the list between 0 and 127
+							print(ENCODERS)
 
 
 
