@@ -279,6 +279,7 @@ class XTouch:
 		for number in numbers:
 			if number >= 0 and number <= 93:
 				self._send_midi('note_on', [number+8, 127])
+				self.leds[number] = 1
 			else:
 				self.warning(f'Button <{number}> is not valid, must be greater than 0 and cant be greater than 93')
 	
@@ -286,12 +287,18 @@ class XTouch:
 		for number in numbers:
 			if number >= 0 and number <= 93:
 				self._send_midi('note_on', [number+8, 0])
+				self.leds[number] = 0
 			else:
 				self.warning(f'Button <{number}> is not valid, must be greater than 0 and cant be greater than 93')
 		
-	def led_toggle(self, *numbers):	# TODO docstring and comments
+	def led_toggle(self, *numbers):	
+		"""Toggles the specified LED(S)
+		Args:
+		- number (int | list) The LED(S) you want to toggle on/off. (0-93)
+		"""
 		for number in numbers:
-			...
+			if   leds[number] == 0:	self.led_on (number);	self.leds[number] = 1 	# Toggle on
+			elif leds[number] == 1:	self.led_off(number);	self.leds[number] = 0 	# Toggle off
 
 	def led_all_off(self):	# TODO docstring and comments
 		for i in range(94):
@@ -410,7 +417,7 @@ if __name__ == '__main__':
 
 
 		xt.update_segment_display()
-		
+		# Code in 3 lines below only for testing. Remove later.
 		for i in range(7):
 			xt.set_scribble_strip_color(i, 'white')
 			xt.set_scribble_strip_data(0, 0, 'Display', 0, f'{i}')
