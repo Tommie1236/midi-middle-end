@@ -8,6 +8,13 @@ import keyboard
 import os
 import time
 
+KEYS = {96: 'up',
+		97: 'down',
+		98: 'left',
+		99: 'right'}
+
+
+
 def debounce(lst):
 	result = []
 	for i in range(len(lst)):
@@ -130,15 +137,15 @@ class XTouch:
 		self.banknr = number
 		self.set_segment_data(0, f'{self.banknr:02d}')
 
-	def update_mode(self, mode):
-		self.mode = mode
+	def update_mode(self, mode = None):
+		if mode: self.mode = mode
 		if self.mode == 'channel':
 			self.led_on(86)
 			self.led_off(87)
 		elif self.mode == 'presets':
 			self.led_on(87)
 			self.led_off(86)
-		self.set_segment_data(2, f'{mode:7}')
+		self.set_segment_data(2, f'{self.mode:7}')
 
 	def get_data(self) -> list:
 		types = {
@@ -248,6 +255,7 @@ class BPM:
 
 	def calculate_bpm(self) -> int:
 		between = round((self.data[-1]	- self.data[0]), 2)
+		if between > 2: return
 		try:
 			self.bpm = int((1 / between) * 60)
 			# print(f'{between:5} {len(self.data):2} {self.bpm} {self.data}')
@@ -285,6 +293,7 @@ if __name__ == '__main__':
 		xt.clear_segments_display()
 
 		xt.set_bank_nr(0)
+		xt.update_mode()
 
 
 		xt.update_segment_display()
@@ -318,34 +327,15 @@ if __name__ == '__main__':
 									bpm.calculate_bpm()
 								elif m[2] == 0:	xt.led_off(93)
 								continue
-							case 96: 
-								if m[2] == 127:
-									xt.led_on(88)
-									keyboard.press('up')
-								elif m[2] == 0:
-									xt.led_off(88)
-									keyboard.release('up')
-							case 97: 
-								if m[2] == 127:
-									xt.led_on(89)
-									keyboard.press('down')
-								elif m[2] == 0:
-									xt.led_off(89)
-									keyboard.release('down')
-							case 98: 
-								if m[2] == 127:
-									xt.led_on(90)
-									keyboard.press('left')
-								elif m[2] == 0:
-									xt.led_off(90)
-									keyboard.release('left')
-							case 99: 
-								if m[2] == 127:
-									xt.led_on(91)
-									keyboard.press('right')
-								elif m[2] == 0:
-									xt.led_off(91)
-									keyboard.release('right')
+
+						if m[1] in [96, 97, 98, 99]:
+							if m[2] == 127:
+								xt.led_on(m[1] - 8)
+								keyboard.press(KEYS[m[1]])
+							elif m[2] == 0:
+								xt.led_off(m[1] - 8)
+								keyboard.release(KEYS[m[1]])
+								
 					if m[0] == 'control_change':
 						match m[1]:
 							case 64:
