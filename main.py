@@ -60,7 +60,8 @@ class XTouch:
 		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
 		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 		self.dots = [0b0000000, 0b00000]
-		self.banknr = 0
+		self.channelbank = 0
+		self.presetsbank = 0
 		self.mode = 'channel'
 
 	def close(self):
@@ -127,25 +128,39 @@ class XTouch:
 			idx += 1
 		self.update_segment_display()
 
-	def update_bank(self, change):
-		self.banknr += change
-		if self.banknr < 0: self.banknr = 99
-		if self.banknr > 99: self.banknr = 0
-		self.set_segment_data(0, f'{self.banknr:02d}')
-		print(colored(f'Bank set to: {self.banknr:02d}', 'green'))
+	def update_bank(self ,change):
+		bank = getattr(self, f'{self.mode}bank')
+		bank += change
+		if bank < 0: bank = 99
+		if bank > 99: bank = 0
+		setattr(self, f'{self.mode}bank', bank)
+		self.set_segment_data(0, f'{bank:02d}')
+		
+		# old one bank system below, maybe handy later to look back on. isn't needed in production anymore
+		# self.banknr += change
+		# if self.banknr < 0: self.banknr = 99
+		# if self.banknr > 99: self.banknr = 0
+		# self.set_segment_data(0, f'{self.banknr:02d}')
+		# print(colored(f'Bank set to: {self.banknr:02d}', 'green'))
 
-	def set_bank_nr(self, number):
-		self.banknr = number
-		self.set_segment_data(0, f'{self.banknr:02d}')
+	def set_bank_nr(self, bank, number):
+		if bank == 'channels':
+			self.channelbank = number
+			self.set_segment_data(0, f'{self.channelbank:02d}')
+		elif bank == 'presets':
+			self.presetsbank = number
+			self.set_segment_data(0, f'{self.presetsbank:02d}')
 
 	def update_mode(self, mode = None):
 		if mode: self.mode = mode
 		if self.mode == 'channel':
 			self.led_on(86)
 			self.led_off(87)
+			self.set_segment_data(0, f'{self.channelbank:02d}')
 		elif self.mode == 'presets':
 			self.led_on(87)
 			self.led_off(86)
+			self.set_segment_data(0, f'{self.presetsbank:02d}')
 		self.set_segment_data(2, f'{self.mode:7}')
 
 	def get_data(self) -> list:
@@ -293,7 +308,8 @@ if __name__ == '__main__':
 		xt.reset_controls()
 		xt.clear_segments_display()
 
-		xt.set_bank_nr(0)
+		xt.set_bank_nr('channel', 0)
+		xt.set_bank_nr('presets', 0)
 		xt.update_mode()
 
 
