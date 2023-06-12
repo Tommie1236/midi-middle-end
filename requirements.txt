@@ -1,3 +1,4 @@
 pygame
 prettyprinter
 termcolor
+keyboard

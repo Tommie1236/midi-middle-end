@@ -4,6 +4,7 @@ from segments import SEGMENTS # 7-segment data
 import pygame.midi
 import pygame
 import argparse
+import keyboard
 import os
 import time
 
@@ -131,6 +132,12 @@ class XTouch:
 
 	def update_mode(self, mode):
 		self.mode = mode
+		if self.mode == 'channel':
+			self.led_on(86)
+			self.led_off(87)
+		elif self.mode == 'presets':
+			self.led_on(87)
+			self.led_off(86)
 		self.set_segment_data(2, f'{mode:7}')
 
 	def get_data(self) -> list:
@@ -187,6 +194,7 @@ class XTouch:
 		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
 
 class MyDmx:
+
 	def __init__(self, ip_port, op_port):
 		self.input  : pygame.midi.Input  = pygame.midi.Input (ip_port)
 		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
@@ -228,6 +236,7 @@ class MyDmx:
 		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
 
 class BPM:
+
 	def __init__(self):
 		self.bpm = 0
 		self.maxdata = 2
@@ -243,7 +252,7 @@ class BPM:
 			self.bpm = int((1 / between) * 60)
 			# print(f'{between:5} {len(self.data):2} {self.bpm} {self.data}')
 		except: pass
-		return f'{self.bpm:03d}'
+		xt.set_segment_data(9, f'{self.bpm:03d}')
 	
 
 
@@ -260,7 +269,6 @@ if __name__ == '__main__':
 		else:
 			ports: tuple = setup_midi()
 			print(ports)
-			exit()
 			xt = XTouch(*ports[0:2])
 			md = MyDmx (*ports[2:4])
 		bpm = BPM()
@@ -287,24 +295,68 @@ if __name__ == '__main__':
 			if d:
 				print(d)
 				for m in d:
-					if m[0] == 'note_on' and m[2] == 127:
+					if m[0] == 'note_on':
 						match m[1]:
 							case 92:	# bankdown button
-								xt.update_bank(-1)
+								if m[2] == 127: xt.update_bank(-1); xt.led_on(84)
+								elif m[2] == 0: xt.led_off(84) 
 								continue
 							case 93:	# bankup button
-								xt.update_bank(1)
+								if m[2] == 127: xt.update_bank(1); xt.led_on(85)
+								elif m[2] == 0: xt.led_off(85)
 								continue
 							case 94:	# channels button
-								xt.update_mode('channel')	
+								xt.update_mode('channel')
 								continue
 							case 95: 	# presets button
 								xt.update_mode('presets')
 								continue
 							case 101:	# bpm button
-								bpm.bpm_pulse()
-								xt.set_segment_data(9, bpm.calculate_bpm())
+								if m[2] == 127:
+									xt.led_on(93)
+									bpm.bpm_pulse()
+									bpm.calculate_bpm()
+								elif m[2] == 0:	xt.led_off(93)
 								continue
+							case 96: 
+								if m[2] == 127:
+									xt.led_on(88)
+									keyboard.press('up')
+								elif m[2] == 0:
+									xt.led_off(88)
+									keyboard.release('up')
+							case 97: 
+								if m[2] == 127:
+									xt.led_on(89)
+									keyboard.press('down')
+								elif m[2] == 0:
+									xt.led_off(89)
+									keyboard.release('down')
+							case 98: 
+								if m[2] == 127:
+									xt.led_on(90)
+									keyboard.press('left')
+								elif m[2] == 0:
+									xt.led_off(90)
+									keyboard.release('left')
+							case 99: 
+								if m[2] == 127:
+									xt.led_on(91)
+									keyboard.press('right')
+								elif m[2] == 0:
+									xt.led_off(91)
+									keyboard.release('right')
+					if m[0] == 'control_change':
+						match m[1]:
+							case 64:
+								if m[2] in [0, 48]:
+									xt.led_on(93)
+									bpm.bpm_pulse()
+									bpm.calculate_bpm()
+								elif m[2] in [127, 175]:
+									xt.led_off(93)
+
+
 
 
 					# md._send_midi(m[0], m[1:]) # uncomment to send all midi data to mydmx3
