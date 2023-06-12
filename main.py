@@ -13,6 +13,16 @@ KEYS = {96: 'up',
 		98: 'left',
 		99: 'right'}
 ENCODERS = [0, 0, 0 ,0 ,0 ,0 ,0 ,0]
+COLORS = {
+		'black'	 : 0b000,
+		'red'	 : 0b001,	
+		'green'	 : 0b010,
+		'yellow' : 0b011,
+		'blue'	 : 0b100,
+		'magenta': 0b101,
+		'cyan'	 : 0b110,
+		'white'	 : 0b111
+}
 
 
 
@@ -35,7 +45,7 @@ def setup_midi():
 	for port in [('x-touch-in', 'in'), ('x-touch-out', 'out'), ('MyDmx-in (mydmx - python)', 'in'), ('MyDmx-out (python - mydmx)', 'out')]:
 		while True:
 			try:
-				i = int(input(f'Enter index of <{port}>: '))
+				i = int(input(f'Enter index of <{port[0]}>: '))
 				if 0 <= i < dev_count:
 					ports[port] = i
 					break
@@ -54,12 +64,14 @@ def setup_argparser():
 	return parser.parse_args()
 
 class XTouch:
-
 	def __init__ (self, ip_port, op_port):
 		self.input  : pygame.midi.Input  = pygame.midi.Input (ip_port)
 		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
 		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 		self.dots = [0b0000000, 0b00000]
+		self.strips1 = [[0x00 for _ in range(7)] for _ in range(8)]
+		self.strips2 = [[0x00 for _ in range(7)] for _ in range(8)]
+		self.backlight = [0b000000 for _ in range(8)]
 		self.channelbank = 0
 		self.presetsbank = 0
 		self.mode = 'channel'
@@ -81,7 +93,7 @@ class XTouch:
 			except:
 				self.error(f'midi data <{[type, *data]}> not send')
 
-	def _send_sysex(self, data):
+	def _send_sysex(self, data: bytes):
 			self.output.write_sys_ex(pygame.midi.time(), data)
 	
 	def update_segment_display(self):
@@ -128,7 +140,65 @@ class XTouch:
 			idx += 1
 		self.update_segment_display()
 
-	def update_bank(self ,change):
+	def update_scribble_strip(self, display: int):
+		if display < 0 or display > 7:
+			self.error(f'Display <{display}> not valid. (0-7)\nData not send!')
+			return
+		self._send_sysex([0xf0, 0x00, 0x20, 0x32, 0x14, 0x4c, display, self.backlight[display], *self.strips1[display], *self.strips2[display], 0xf7])
+
+	def set_scribble_strip_color(self, display: int, color: str, inv_top: bool = False, inv_bottom: bool = False):
+		""" backlight
+		0bxxxyz
+		xxx - color
+		000 - black
+		001 - red
+		010 - green
+		011 - yellow
+		100 - blue
+		101 - magenta
+		110 - cyan
+		111 - white
+
+		y - invert top
+		z - invert bottom
+		"""
+		self.backlight[display] = 0b00000
+		self.backlight[display] |= COLORS[color] << 0
+		self.backlight[display] |= inv_top << 4
+		self.backlight[display] |= inv_bottom << 5
+
+	def clear_scribble_strip(self, display: int):
+		self.strips1[display] = [0b00 for _ in range(7)]
+		self.strips2[display] = [0b00 for _ in range(7)]
+		self.update_scribble_strip(display)
+
+	def clear_scribble_strips(self):
+		for i in range(8):
+			self.clear_scribble_strip(i)
+
+	def set_scribble_strip_data(self, display: int, topidx: int, topchars: str, bottomidx: int, bottomchars: str):
+		# set top display data
+		if not isinstance(topidx, int): self.warning(f'Topidx needs to be a integer.')
+		if topidx < 0 or topidx > 7: self.error(f'Character index <{topidx}> out of range. (0-7)')
+		if topidx + len(topchars) > 14: self.warning(f"Topchars: <{topchars}> doesn't fit in the display, characthers are cut off.")
+		
+		for char in topchars:
+			if topidx > 7: break
+			self.strips1[display][topidx] = ord(char)
+			topidx += 1
+		
+		if not isinstance(bottomidx, int): self.warning(f'Bottomidx needs to be a integer.')
+		if bottomidx < 0 or bottomidx > 7: self.error(f'Character index <{bottomidx}> out of range. (0-7)')
+		if bottomidx + len(bottomchars) > 14: self.warning(f"Bottomchars: <{bottomchars}> doesn't fit in the display, characthers are cut off.")
+		
+		for char in bottomchars:
+			if bottomidx > 7: break
+			self.strips2[display][bottomidx] = ord(char)
+			bottomidx += 1
+
+		self.update_scribble_strip(display)
+
+	def update_bank(self ,change: int):
 		bank = getattr(self, f'{self.mode}bank')
 		bank += change
 		if bank < 0: bank = 99
@@ -143,7 +213,7 @@ class XTouch:
 		# self.set_segment_data(0, f'{self.banknr:02d}')
 		# print(colored(f'Bank set to: {self.banknr:02d}', 'green'))
 
-	def set_bank_nr(self, bank, number):
+	def set_bank_nr(self, bank: str, number: int):
 		if bank == 'channels':
 			self.channelbank = number
 			self.set_segment_data(0, f'{self.channelbank:02d}')
@@ -210,14 +280,13 @@ class XTouch:
 			self._send_midi('control_change', [i + 70, 127])
 			time.sleep(.1)
 
-	def error(self, message):
+	def error(self, message: str):
 		print(colored(f'ERROR: {message}', 'white', 'on_red'))
 
-	def warning(self, message):
+	def warning(self, message: str):
 		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
 
 class MyDmx:
-
 	def __init__(self, ip_port, op_port):
 		self.input  : pygame.midi.Input  = pygame.midi.Input (ip_port)
 		self.output : pygame.midi.Output = pygame.midi.Output(op_port)
@@ -259,7 +328,6 @@ class MyDmx:
 		print(colored(f'WARNING: {message}', 'white', 'on_blue'))
 
 class BPM:
-
 	def __init__(self):
 		self.bpm = 0
 		self.maxdata = 2
@@ -302,11 +370,11 @@ if __name__ == '__main__':
 
 		# startup sequence
 		xt.led_all_on()
-		xt.all_faders_up()
-		xt.set_segment_data(0, '0123456789ab')
-		time.sleep(.5)
+		# xt.all_faders_up()
+		# xt.set_segment_data(0, '0123456789ab')
+		# time.sleep(.5)
 		xt.reset_controls()
-		xt.clear_segments_display()
+		# xt.clear_segments_display()
 
 		xt.set_bank_nr('channel', 0)
 		xt.set_bank_nr('presets', 0)
@@ -315,6 +383,14 @@ if __name__ == '__main__':
 
 		xt.update_segment_display()
 		
+		xt.set_scribble_strip_color(0, 'red')
+		xt.set_scribble_strip_data(0, 0, 'Display', 0, '1')
+		xt.set_scribble_strip_color(0, 'green')
+		xt.set_scribble_strip_data(1, 0, 'Display', 0, '2')
+
+
+
+
 		# just send everyting to the other midi port
 		while True:
 			d = xt.get_data()
@@ -325,8 +401,8 @@ if __name__ == '__main__':
 						match m[1]:
 							case 92:	# bankdown button
 								if m[2] == 127: xt.update_bank(-1); xt.led_on(84)
-								elif m[2] == 0: xt.led_off(84) 
-								continue
+								elif m[2] == 0: xt.led_off(84)
+								continue 
 							case 93:	# bankup button
 								if m[2] == 127: xt.update_bank(1); xt.led_on(85)
 								elif m[2] == 0: xt.led_off(85)
@@ -344,6 +420,8 @@ if __name__ == '__main__':
 									bpm.calculate_bpm()
 								elif m[2] == 0:	xt.led_off(93)
 								continue
+							
+															
 
 						if m[1] in [96, 97, 98, 99]:
 							if m[2] == 127:
@@ -352,6 +430,8 @@ if __name__ == '__main__':
 							elif m[2] == 0:
 								xt.led_off(m[1] - 8)
 								keyboard.release(KEYS[m[1]])
+							continue
+							
 
 					if m[0] == 'control_change':
 						match m[1]:
@@ -362,15 +442,21 @@ if __name__ == '__main__':
 									bpm.calculate_bpm()
 								elif m[2] in [127, 175]:
 									xt.led_off(93)
+								continue
+							case 88:
+								if m[2] == 65:
+									xt.update_bank(1)
+								elif m[2] == 1:
+									xt.update_bank(-1)
+								continue
+
 						if m[1] in [80, 81, 82, 83, 84, 85, 86, 87]:
 							if m[2] == 1:
 								ENCODERS[m[1] - 80] -= 9
 							elif m[2] == 65:
 								ENCODERS[m[1] - 80] += 9
-
-							print(ENCODERS)
 							ENCODERS = [max(0, min(value, 127)) for value in ENCODERS] # cap the values in the list between 0 and 127
-							print(ENCODERS)
+							continue
 
 
 
