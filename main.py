@@ -1,6 +1,7 @@
 import argparse
 import os
 import time
+import json
 
 import keyboard
 import pygame
@@ -69,15 +70,15 @@ class XTouch:
 		self.op_port = op_port
 		self.input  : pygame.midi.Input  = pygame.midi.Input (self.ip_port)	# connect to MIDI in port of x-touch
 		self.output : pygame.midi.Output = pygame.midi.Output(self.op_port)	# connect to MIDI out port of x-touch
-		self.segments = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]	# set segment display data to all off
-		self.dots = [0b0000000, 0b00000]								# set segment dots to all off
-		self.strips1 = [[0x00 for _ in range(7)] for _ in range(8)]		# create list of 8 displays of 7 chars (top display)
-		self.strips2 = [[0x00 for _ in range(7)] for _ in range(8)]		# create list of 8 displays of 7 chars (bottom display)
-		self.backlight = [0b000000 for _ in range(8)]					# create list of 8x 0b00000 for backlight
-		self.channelbank = 0 											# set the channel-bank to 0
-		self.presetsbank = 0 											# set the presets-bank to 0
-		self.mode = 'channel'											# set mode to channel
-		self.leds = [0 for _ in range(93)]								# create a list of 93 zeroes
+		self.segments = [0x00 for _ in range(12)]							# set segment display data to all off
+		self.dots = [0b0000000, 0b00000]									# set segment dots to all off
+		self.strips1 = [[0x00 for _ in range(7)] for _ in range(8)]			# create list of 8 displays of 7 chars (top display)
+		self.strips2 = [[0x00 for _ in range(7)] for _ in range(8)]			# create list of 8 displays of 7 chars (bottom display)
+		self.backlight = [0b000000 for _ in range(8)]						# create list of 8x 0b00000 for backlight
+		self.channelbank = 0 												# set the channel-bank to 0
+		self.presetsbank = 0 												# set the presets-bank to 0
+		self.mode = 'channel'												# set mode to channel
+		self.leds = [0 for _ in range(93)]									# create a list of 93 zeroes
 
 	def close(self):
 		"""close the MIDI ports"""
@@ -297,8 +298,8 @@ class XTouch:
 		- number (int | list) The LED(S) you want to toggle on/off. (0-93)
 		"""
 		for number in numbers:
-			if   leds[number] == 0:	self.led_on (number);	self.leds[number] = 1 	# Toggle on
-			elif leds[number] == 1:	self.led_off(number);	self.leds[number] = 0 	# Toggle off
+			if   self.leds[number] == 0:	self.led_on (number);	self.leds[number] = 1 	# Toggle on
+			elif self.leds[number] == 1:	self.led_off(number);	self.leds[number] = 0 	# Toggle off
 
 	def led_all_off(self):	# TODO docstring and comments
 		for i in range(94):
@@ -381,7 +382,25 @@ class BPM:	# TODO docstring and comments
 		except: pass
 		xt.set_segment_data(9, f'{self.bpm:03d}')
 	
+class Presets:	# TODO docstring and comments
+	def __init__(self):
+		self.data = {}
 
+	def load(self, file: str = 'presets.json'):
+		self.file = file
+		with open(self.file, 'r') as file:
+			self.data = json.load(file)
+
+	def save(self, file: str, indent: int = 4):
+		if file:
+			with open(file, 'w') as file:
+				json.dump(self.data, file, indent)
+		else:
+			with open(self.file. 'w') as file:
+				json.dump(self.data, file, indent)
+
+	def get_channel(self, bank: int, channel: int):
+		self.data[]
 
 
 if __name__ == '__main__':

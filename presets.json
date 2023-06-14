@@ -1,0 +1,17 @@
+{
+	"presets": {
+		"0": {
+			"0": {
+				"name": "preset1",
+				"encoder": 0,
+				"encoder_led": 0,
+				"led_bar": 0,
+				"button_1": false,
+				"button_2": false,
+				"button_3": false,
+				"button_4": false,
+				"fader": 0
+			}
+		}
+	} 
+}
