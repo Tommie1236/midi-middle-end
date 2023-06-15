@@ -3,6 +3,7 @@
         "bank0": {
             "0": {
                 "name": "preset1",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -38,6 +39,7 @@
             },
             "1": {
                 "name": "preset2",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -73,6 +75,7 @@
             },
             "2": {
                 "name": "preset3",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -108,6 +111,7 @@
             },
             "3": {
                 "name": "preset4",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -143,6 +147,7 @@
             },
             "4": {
                 "name": "preset5",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -178,6 +183,7 @@
             },
             "5": {
                 "name": "preset6",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -213,6 +219,7 @@
             },
             "6": {
                 "name": "preset7",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -248,6 +255,7 @@
             },
             "7": {
                 "name": "preset8",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -285,6 +293,7 @@
         "bank1": {
             "0": {
                 "name": "preset9",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -320,6 +329,7 @@
             },
             "1": {
                 "name": "preset10",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -355,6 +365,7 @@
             },
             "2": {
                 "name": "preset11",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -390,6 +401,7 @@
             },
             "3": {
                 "name": "preset12",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -425,6 +437,7 @@
             },
             "4": {
                 "name": "preset13",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -460,6 +473,7 @@
             },
             "5": {
                 "name": "preset14",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -495,6 +509,7 @@
             },
             "6": {
                 "name": "preset15",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -530,6 +545,7 @@
             },
             "7": {
                 "name": "preset16",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -567,6 +583,7 @@
         "bank2": {
             "0": {
                 "name": "preset17",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -602,6 +619,7 @@
             },
             "1": {
                 "name": "preset18",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -637,6 +655,7 @@
             },
             "2": {
                 "name": "preset19",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -672,6 +691,7 @@
             },
             "3": {
                 "name": "preset20",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -707,6 +727,7 @@
             },
             "4": {
                 "name": "preset21",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -742,6 +763,7 @@
             },
             "5": {
                 "name": "preset22",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -777,6 +799,7 @@
             },
             "6": {
                 "name": "preset23",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -812,6 +835,7 @@
             },
             "7": {
                 "name": "preset24",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -849,6 +873,7 @@
         "bank3": {
             "0": {
                 "name": "preset25",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -884,6 +909,7 @@
             },
             "1": {
                 "name": "preset26",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -919,6 +945,7 @@
             },
             "2": {
                 "name": "preset27",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -954,6 +981,7 @@
             },
             "3": {
                 "name": "preset28",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -989,6 +1017,7 @@
             },
             "4": {
                 "name": "preset29",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1024,6 +1053,7 @@
             },
             "5": {
                 "name": "preset30",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1059,6 +1089,7 @@
             },
             "6": {
                 "name": "preset31",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1094,6 +1125,7 @@
             },
             "7": {
                 "name": "preset32",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1131,6 +1163,7 @@
         "bank4": {
             "0": {
                 "name": "preset33",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1166,6 +1199,7 @@
             },
             "1": {
                 "name": "preset34",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1201,6 +1235,7 @@
             },
             "2": {
                 "name": "preset35",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1236,6 +1271,7 @@
             },
             "3": {
                 "name": "preset36",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1271,6 +1307,7 @@
             },
             "4": {
                 "name": "preset37",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1306,6 +1343,7 @@
             },
             "5": {
                 "name": "preset38",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1341,6 +1379,7 @@
             },
             "6": {
                 "name": "preset39",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1376,6 +1415,7 @@
             },
             "7": {
                 "name": "preset40",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1413,6 +1453,7 @@
         "bank5": {
             "0": {
                 "name": "preset41",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1448,6 +1489,7 @@
             },
             "1": {
                 "name": "preset42",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1483,6 +1525,7 @@
             },
             "2": {
                 "name": "preset43",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1518,6 +1561,7 @@
             },
             "3": {
                 "name": "preset44",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1553,6 +1597,7 @@
             },
             "4": {
                 "name": "preset45",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1588,6 +1633,7 @@
             },
             "5": {
                 "name": "preset46",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1623,6 +1669,7 @@
             },
             "6": {
                 "name": "preset47",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1658,6 +1705,7 @@
             },
             "7": {
                 "name": "preset48",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1695,6 +1743,7 @@
         "bank6": {
             "0": {
                 "name": "preset49",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1730,6 +1779,7 @@
             },
             "1": {
                 "name": "preset50",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1765,6 +1815,7 @@
             },
             "2": {
                 "name": "preset51",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1800,6 +1851,7 @@
             },
             "3": {
                 "name": "preset52",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1835,6 +1887,7 @@
             },
             "4": {
                 "name": "preset53",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1870,6 +1923,7 @@
             },
             "5": {
                 "name": "preset54",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1905,6 +1959,7 @@
             },
             "6": {
                 "name": "preset55",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1940,6 +1995,7 @@
             },
             "7": {
                 "name": "preset56",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -1977,6 +2033,7 @@
         "bank7": {
             "0": {
                 "name": "preset57",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2012,6 +2069,7 @@
             },
             "1": {
                 "name": "preset58",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2047,6 +2105,7 @@
             },
             "2": {
                 "name": "preset59",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2082,6 +2141,7 @@
             },
             "3": {
                 "name": "preset60",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2117,6 +2177,7 @@
             },
             "4": {
                 "name": "preset61",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2152,6 +2213,7 @@
             },
             "5": {
                 "name": "preset62",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2187,6 +2249,7 @@
             },
             "6": {
                 "name": "preset63",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2222,6 +2285,7 @@
             },
             "7": {
                 "name": "preset64",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2259,6 +2323,7 @@
         "bank8": {
             "0": {
                 "name": "preset65",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2294,6 +2359,7 @@
             },
             "1": {
                 "name": "preset66",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2329,6 +2395,7 @@
             },
             "2": {
                 "name": "preset67",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2364,6 +2431,7 @@
             },
             "3": {
                 "name": "preset68",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2399,6 +2467,7 @@
             },
             "4": {
                 "name": "preset69",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2434,6 +2503,7 @@
             },
             "5": {
                 "name": "preset70",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2469,6 +2539,7 @@
             },
             "6": {
                 "name": "preset71",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2504,6 +2575,7 @@
             },
             "7": {
                 "name": "preset72",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2541,6 +2613,7 @@
         "bank9": {
             "0": {
                 "name": "preset73",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2576,6 +2649,7 @@
             },
             "1": {
                 "name": "preset74",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2611,6 +2685,7 @@
             },
             "2": {
                 "name": "preset75",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2646,6 +2721,7 @@
             },
             "3": {
                 "name": "preset76",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2681,6 +2757,7 @@
             },
             "4": {
                 "name": "preset77",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2716,6 +2793,7 @@
             },
             "5": {
                 "name": "preset78",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2751,6 +2829,7 @@
             },
             "6": {
                 "name": "preset79",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2786,6 +2865,7 @@
             },
             "7": {
                 "name": "preset80",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2823,6 +2903,7 @@
         "bank10": {
             "0": {
                 "name": "preset81",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2858,6 +2939,7 @@
             },
             "1": {
                 "name": "preset82",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2893,6 +2975,7 @@
             },
             "2": {
                 "name": "preset83",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2928,6 +3011,7 @@
             },
             "3": {
                 "name": "preset84",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2963,6 +3047,7 @@
             },
             "4": {
                 "name": "preset85",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -2998,6 +3083,7 @@
             },
             "5": {
                 "name": "preset86",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3033,6 +3119,7 @@
             },
             "6": {
                 "name": "preset87",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3068,6 +3155,7 @@
             },
             "7": {
                 "name": "preset88",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3105,6 +3193,7 @@
         "bank11": {
             "0": {
                 "name": "preset89",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3140,6 +3229,7 @@
             },
             "1": {
                 "name": "preset90",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3175,6 +3265,7 @@
             },
             "2": {
                 "name": "preset91",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3210,6 +3301,7 @@
             },
             "3": {
                 "name": "preset92",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3245,6 +3337,7 @@
             },
             "4": {
                 "name": "preset93",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3280,6 +3373,7 @@
             },
             "5": {
                 "name": "preset94",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3315,6 +3409,7 @@
             },
             "6": {
                 "name": "preset95",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3350,6 +3445,7 @@
             },
             "7": {
                 "name": "preset96",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3387,6 +3483,7 @@
         "bank12": {
             "0": {
                 "name": "preset97",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3422,6 +3519,7 @@
             },
             "1": {
                 "name": "preset98",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3457,6 +3555,7 @@
             },
             "2": {
                 "name": "preset99",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3492,6 +3591,7 @@
             },
             "3": {
                 "name": "preset100",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3527,6 +3627,7 @@
             },
             "4": {
                 "name": "preset101",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3562,6 +3663,7 @@
             },
             "5": {
                 "name": "preset102",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3597,6 +3699,7 @@
             },
             "6": {
                 "name": "preset103",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3632,6 +3735,7 @@
             },
             "7": {
                 "name": "preset104",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3669,6 +3773,7 @@
         "bank13": {
             "0": {
                 "name": "preset105",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3704,6 +3809,7 @@
             },
             "1": {
                 "name": "preset106",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3739,6 +3845,7 @@
             },
             "2": {
                 "name": "preset107",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3774,6 +3881,7 @@
             },
             "3": {
                 "name": "preset108",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3809,6 +3917,7 @@
             },
             "4": {
                 "name": "preset109",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3844,6 +3953,7 @@
             },
             "5": {
                 "name": "preset110",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3879,6 +3989,7 @@
             },
             "6": {
                 "name": "preset111",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3914,6 +4025,7 @@
             },
             "7": {
                 "name": "preset112",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3951,6 +4063,7 @@
         "bank14": {
             "0": {
                 "name": "preset113",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -3986,6 +4099,7 @@
             },
             "1": {
                 "name": "preset114",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4021,6 +4135,7 @@
             },
             "2": {
                 "name": "preset115",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4056,6 +4171,7 @@
             },
             "3": {
                 "name": "preset116",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4091,6 +4207,7 @@
             },
             "4": {
                 "name": "preset117",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4126,6 +4243,7 @@
             },
             "5": {
                 "name": "preset118",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4161,6 +4279,7 @@
             },
             "6": {
                 "name": "preset119",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4196,6 +4315,7 @@
             },
             "7": {
                 "name": "preset120",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4233,6 +4353,7 @@
         "bank15": {
             "0": {
                 "name": "preset121",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4268,6 +4389,7 @@
             },
             "1": {
                 "name": "preset122",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4303,6 +4425,7 @@
             },
             "2": {
                 "name": "preset123",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4338,6 +4461,7 @@
             },
             "3": {
                 "name": "preset124",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4373,6 +4497,7 @@
             },
             "4": {
                 "name": "preset125",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4408,6 +4533,7 @@
             },
             "5": {
                 "name": "preset126",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4443,6 +4569,7 @@
             },
             "6": {
                 "name": "preset127",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4478,6 +4605,7 @@
             },
             "7": {
                 "name": "preset128",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4515,6 +4643,7 @@
         "bank16": {
             "0": {
                 "name": "preset129",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4550,6 +4679,7 @@
             },
             "1": {
                 "name": "preset130",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4585,6 +4715,7 @@
             },
             "2": {
                 "name": "preset131",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4620,6 +4751,7 @@
             },
             "3": {
                 "name": "preset132",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4655,6 +4787,7 @@
             },
             "4": {
                 "name": "preset133",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4690,6 +4823,7 @@
             },
             "5": {
                 "name": "preset134",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4725,6 +4859,7 @@
             },
             "6": {
                 "name": "preset135",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4760,6 +4895,7 @@
             },
             "7": {
                 "name": "preset136",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4797,6 +4933,7 @@
         "bank17": {
             "0": {
                 "name": "preset137",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4832,6 +4969,7 @@
             },
             "1": {
                 "name": "preset138",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4867,6 +5005,7 @@
             },
             "2": {
                 "name": "preset139",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4902,6 +5041,7 @@
             },
             "3": {
                 "name": "preset140",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4937,6 +5077,7 @@
             },
             "4": {
                 "name": "preset141",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -4972,6 +5113,7 @@
             },
             "5": {
                 "name": "preset142",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5007,6 +5149,7 @@
             },
             "6": {
                 "name": "preset143",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5042,6 +5185,7 @@
             },
             "7": {
                 "name": "preset144",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5079,6 +5223,7 @@
         "bank18": {
             "0": {
                 "name": "preset145",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5114,6 +5259,7 @@
             },
             "1": {
                 "name": "preset146",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5149,6 +5295,7 @@
             },
             "2": {
                 "name": "preset147",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5184,6 +5331,7 @@
             },
             "3": {
                 "name": "preset148",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5219,6 +5367,7 @@
             },
             "4": {
                 "name": "preset149",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5254,6 +5403,7 @@
             },
             "5": {
                 "name": "preset150",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5289,6 +5439,7 @@
             },
             "6": {
                 "name": "preset151",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5324,6 +5475,7 @@
             },
             "7": {
                 "name": "preset152",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5361,6 +5513,7 @@
         "bank19": {
             "0": {
                 "name": "preset153",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5396,6 +5549,7 @@
             },
             "1": {
                 "name": "preset154",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5431,6 +5585,7 @@
             },
             "2": {
                 "name": "preset155",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5466,6 +5621,7 @@
             },
             "3": {
                 "name": "preset156",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5501,6 +5657,7 @@
             },
             "4": {
                 "name": "preset157",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5536,6 +5693,7 @@
             },
             "5": {
                 "name": "preset158",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5571,6 +5729,7 @@
             },
             "6": {
                 "name": "preset159",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5606,6 +5765,7 @@
             },
             "7": {
                 "name": "preset160",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5643,6 +5803,7 @@
         "bank20": {
             "0": {
                 "name": "preset161",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5678,6 +5839,7 @@
             },
             "1": {
                 "name": "preset162",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5713,6 +5875,7 @@
             },
             "2": {
                 "name": "preset163",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5748,6 +5911,7 @@
             },
             "3": {
                 "name": "preset164",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5783,6 +5947,7 @@
             },
             "4": {
                 "name": "preset165",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5818,6 +5983,7 @@
             },
             "5": {
                 "name": "preset166",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5853,6 +6019,7 @@
             },
             "6": {
                 "name": "preset167",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5888,6 +6055,7 @@
             },
             "7": {
                 "name": "preset168",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5925,6 +6093,7 @@
         "bank21": {
             "0": {
                 "name": "preset169",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5960,6 +6129,7 @@
             },
             "1": {
                 "name": "preset170",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -5995,6 +6165,7 @@
             },
             "2": {
                 "name": "preset171",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6030,6 +6201,7 @@
             },
             "3": {
                 "name": "preset172",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6065,6 +6237,7 @@
             },
             "4": {
                 "name": "preset173",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6100,6 +6273,7 @@
             },
             "5": {
                 "name": "preset174",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6135,6 +6309,7 @@
             },
             "6": {
                 "name": "preset175",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6170,6 +6345,7 @@
             },
             "7": {
                 "name": "preset176",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6207,6 +6383,7 @@
         "bank22": {
             "0": {
                 "name": "preset177",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6242,6 +6419,7 @@
             },
             "1": {
                 "name": "preset178",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6277,6 +6455,7 @@
             },
             "2": {
                 "name": "preset179",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6312,6 +6491,7 @@
             },
             "3": {
                 "name": "preset180",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6347,6 +6527,7 @@
             },
             "4": {
                 "name": "preset181",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6382,6 +6563,7 @@
             },
             "5": {
                 "name": "preset182",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6417,6 +6599,7 @@
             },
             "6": {
                 "name": "preset183",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6452,6 +6635,7 @@
             },
             "7": {
                 "name": "preset184",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6489,6 +6673,7 @@
         "bank23": {
             "0": {
                 "name": "preset185",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6524,6 +6709,7 @@
             },
             "1": {
                 "name": "preset186",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6559,6 +6745,7 @@
             },
             "2": {
                 "name": "preset187",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6594,6 +6781,7 @@
             },
             "3": {
                 "name": "preset188",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6629,6 +6817,7 @@
             },
             "4": {
                 "name": "preset189",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6664,6 +6853,7 @@
             },
             "5": {
                 "name": "preset190",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6699,6 +6889,7 @@
             },
             "6": {
                 "name": "preset191",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6734,6 +6925,7 @@
             },
             "7": {
                 "name": "preset192",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6771,6 +6963,7 @@
         "bank24": {
             "0": {
                 "name": "preset193",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6806,6 +6999,7 @@
             },
             "1": {
                 "name": "preset194",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6841,6 +7035,7 @@
             },
             "2": {
                 "name": "preset195",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6876,6 +7071,7 @@
             },
             "3": {
                 "name": "preset196",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6911,6 +7107,7 @@
             },
             "4": {
                 "name": "preset197",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6946,6 +7143,7 @@
             },
             "5": {
                 "name": "preset198",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -6981,6 +7179,7 @@
             },
             "6": {
                 "name": "preset199",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7016,6 +7215,7 @@
             },
             "7": {
                 "name": "preset200",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7053,6 +7253,7 @@
         "bank25": {
             "0": {
                 "name": "preset201",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7088,6 +7289,7 @@
             },
             "1": {
                 "name": "preset202",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7123,6 +7325,7 @@
             },
             "2": {
                 "name": "preset203",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7158,6 +7361,7 @@
             },
             "3": {
                 "name": "preset204",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7193,6 +7397,7 @@
             },
             "4": {
                 "name": "preset205",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7228,6 +7433,7 @@
             },
             "5": {
                 "name": "preset206",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7263,6 +7469,7 @@
             },
             "6": {
                 "name": "preset207",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7298,6 +7505,7 @@
             },
             "7": {
                 "name": "preset208",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7335,6 +7543,7 @@
         "bank26": {
             "0": {
                 "name": "preset209",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7370,6 +7579,7 @@
             },
             "1": {
                 "name": "preset210",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7405,6 +7615,7 @@
             },
             "2": {
                 "name": "preset211",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7440,6 +7651,7 @@
             },
             "3": {
                 "name": "preset212",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7475,6 +7687,7 @@
             },
             "4": {
                 "name": "preset213",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7510,6 +7723,7 @@
             },
             "5": {
                 "name": "preset214",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7545,6 +7759,7 @@
             },
             "6": {
                 "name": "preset215",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7580,6 +7795,7 @@
             },
             "7": {
                 "name": "preset216",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7617,6 +7833,7 @@
         "bank27": {
             "0": {
                 "name": "preset217",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7652,6 +7869,7 @@
             },
             "1": {
                 "name": "preset218",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7687,6 +7905,7 @@
             },
             "2": {
                 "name": "preset219",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7722,6 +7941,7 @@
             },
             "3": {
                 "name": "preset220",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7757,6 +7977,7 @@
             },
             "4": {
                 "name": "preset221",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7792,6 +8013,7 @@
             },
             "5": {
                 "name": "preset222",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7827,6 +8049,7 @@
             },
             "6": {
                 "name": "preset223",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7862,6 +8085,7 @@
             },
             "7": {
                 "name": "preset224",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7899,6 +8123,7 @@
         "bank28": {
             "0": {
                 "name": "preset225",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7934,6 +8159,7 @@
             },
             "1": {
                 "name": "preset226",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -7969,6 +8195,7 @@
             },
             "2": {
                 "name": "preset227",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8004,6 +8231,7 @@
             },
             "3": {
                 "name": "preset228",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8039,6 +8267,7 @@
             },
             "4": {
                 "name": "preset229",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8074,6 +8303,7 @@
             },
             "5": {
                 "name": "preset230",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8109,6 +8339,7 @@
             },
             "6": {
                 "name": "preset231",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8144,6 +8375,7 @@
             },
             "7": {
                 "name": "preset232",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8181,6 +8413,7 @@
         "bank29": {
             "0": {
                 "name": "preset233",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8216,6 +8449,7 @@
             },
             "1": {
                 "name": "preset234",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8251,6 +8485,7 @@
             },
             "2": {
                 "name": "preset235",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8286,6 +8521,7 @@
             },
             "3": {
                 "name": "preset236",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8321,6 +8557,7 @@
             },
             "4": {
                 "name": "preset237",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8356,6 +8593,7 @@
             },
             "5": {
                 "name": "preset238",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8391,6 +8629,7 @@
             },
             "6": {
                 "name": "preset239",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8426,6 +8665,7 @@
             },
             "7": {
                 "name": "preset240",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8463,6 +8703,7 @@
         "bank30": {
             "0": {
                 "name": "preset241",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8498,6 +8739,7 @@
             },
             "1": {
                 "name": "preset242",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8533,6 +8775,7 @@
             },
             "2": {
                 "name": "preset243",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8568,6 +8811,7 @@
             },
             "3": {
                 "name": "preset244",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8603,6 +8847,7 @@
             },
             "4": {
                 "name": "preset245",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8638,6 +8883,7 @@
             },
             "5": {
                 "name": "preset246",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8673,6 +8919,7 @@
             },
             "6": {
                 "name": "preset247",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8708,6 +8955,7 @@
             },
             "7": {
                 "name": "preset248",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8745,6 +8993,7 @@
         "bank31": {
             "0": {
                 "name": "preset249",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8780,6 +9029,7 @@
             },
             "1": {
                 "name": "preset250",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8815,6 +9065,7 @@
             },
             "2": {
                 "name": "preset251",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8850,6 +9101,7 @@
             },
             "3": {
                 "name": "preset252",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8885,6 +9137,7 @@
             },
             "4": {
                 "name": "preset253",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8920,6 +9173,7 @@
             },
             "5": {
                 "name": "preset254",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8955,6 +9209,7 @@
             },
             "6": {
                 "name": "preset255",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -8990,6 +9245,7 @@
             },
             "7": {
                 "name": "preset256",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9027,6 +9283,7 @@
         "bank32": {
             "0": {
                 "name": "preset257",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9062,6 +9319,7 @@
             },
             "1": {
                 "name": "preset258",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9097,6 +9355,7 @@
             },
             "2": {
                 "name": "preset259",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9132,6 +9391,7 @@
             },
             "3": {
                 "name": "preset260",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9167,6 +9427,7 @@
             },
             "4": {
                 "name": "preset261",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9202,6 +9463,7 @@
             },
             "5": {
                 "name": "preset262",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9237,6 +9499,7 @@
             },
             "6": {
                 "name": "preset263",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9272,6 +9535,7 @@
             },
             "7": {
                 "name": "preset264",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9309,6 +9573,7 @@
         "bank33": {
             "0": {
                 "name": "preset265",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9344,6 +9609,7 @@
             },
             "1": {
                 "name": "preset266",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9379,6 +9645,7 @@
             },
             "2": {
                 "name": "preset267",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9414,6 +9681,7 @@
             },
             "3": {
                 "name": "preset268",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9449,6 +9717,7 @@
             },
             "4": {
                 "name": "preset269",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9484,6 +9753,7 @@
             },
             "5": {
                 "name": "preset270",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9519,6 +9789,7 @@
             },
             "6": {
                 "name": "preset271",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9554,6 +9825,7 @@
             },
             "7": {
                 "name": "preset272",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9591,6 +9863,7 @@
         "bank34": {
             "0": {
                 "name": "preset273",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9626,6 +9899,7 @@
             },
             "1": {
                 "name": "preset274",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9661,6 +9935,7 @@
             },
             "2": {
                 "name": "preset275",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9696,6 +9971,7 @@
             },
             "3": {
                 "name": "preset276",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9731,6 +10007,7 @@
             },
             "4": {
                 "name": "preset277",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9766,6 +10043,7 @@
             },
             "5": {
                 "name": "preset278",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9801,6 +10079,7 @@
             },
             "6": {
                 "name": "preset279",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9836,6 +10115,7 @@
             },
             "7": {
                 "name": "preset280",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9873,6 +10153,7 @@
         "bank35": {
             "0": {
                 "name": "preset281",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9908,6 +10189,7 @@
             },
             "1": {
                 "name": "preset282",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9943,6 +10225,7 @@
             },
             "2": {
                 "name": "preset283",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -9978,6 +10261,7 @@
             },
             "3": {
                 "name": "preset284",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10013,6 +10297,7 @@
             },
             "4": {
                 "name": "preset285",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10048,6 +10333,7 @@
             },
             "5": {
                 "name": "preset286",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10083,6 +10369,7 @@
             },
             "6": {
                 "name": "preset287",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10118,6 +10405,7 @@
             },
             "7": {
                 "name": "preset288",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10155,6 +10443,7 @@
         "bank36": {
             "0": {
                 "name": "preset289",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10190,6 +10479,7 @@
             },
             "1": {
                 "name": "preset290",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10225,6 +10515,7 @@
             },
             "2": {
                 "name": "preset291",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10260,6 +10551,7 @@
             },
             "3": {
                 "name": "preset292",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10295,6 +10587,7 @@
             },
             "4": {
                 "name": "preset293",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10330,6 +10623,7 @@
             },
             "5": {
                 "name": "preset294",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10365,6 +10659,7 @@
             },
             "6": {
                 "name": "preset295",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10400,6 +10695,7 @@
             },
             "7": {
                 "name": "preset296",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10437,6 +10733,7 @@
         "bank37": {
             "0": {
                 "name": "preset297",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10472,6 +10769,7 @@
             },
             "1": {
                 "name": "preset298",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10507,6 +10805,7 @@
             },
             "2": {
                 "name": "preset299",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10542,6 +10841,7 @@
             },
             "3": {
                 "name": "preset300",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10577,6 +10877,7 @@
             },
             "4": {
                 "name": "preset301",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10612,6 +10913,7 @@
             },
             "5": {
                 "name": "preset302",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10647,6 +10949,7 @@
             },
             "6": {
                 "name": "preset303",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10682,6 +10985,7 @@
             },
             "7": {
                 "name": "preset304",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10719,6 +11023,7 @@
         "bank38": {
             "0": {
                 "name": "preset305",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10754,6 +11059,7 @@
             },
             "1": {
                 "name": "preset306",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10789,6 +11095,7 @@
             },
             "2": {
                 "name": "preset307",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10824,6 +11131,7 @@
             },
             "3": {
                 "name": "preset308",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10859,6 +11167,7 @@
             },
             "4": {
                 "name": "preset309",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10894,6 +11203,7 @@
             },
             "5": {
                 "name": "preset310",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10929,6 +11239,7 @@
             },
             "6": {
                 "name": "preset311",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -10964,6 +11275,7 @@
             },
             "7": {
                 "name": "preset312",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11001,6 +11313,7 @@
         "bank39": {
             "0": {
                 "name": "preset313",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11036,6 +11349,7 @@
             },
             "1": {
                 "name": "preset314",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11071,6 +11385,7 @@
             },
             "2": {
                 "name": "preset315",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11106,6 +11421,7 @@
             },
             "3": {
                 "name": "preset316",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11141,6 +11457,7 @@
             },
             "4": {
                 "name": "preset317",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11176,6 +11493,7 @@
             },
             "5": {
                 "name": "preset318",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11211,6 +11529,7 @@
             },
             "6": {
                 "name": "preset319",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11246,6 +11565,7 @@
             },
             "7": {
                 "name": "preset320",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11283,6 +11603,7 @@
         "bank40": {
             "0": {
                 "name": "preset321",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11318,6 +11639,7 @@
             },
             "1": {
                 "name": "preset322",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11353,6 +11675,7 @@
             },
             "2": {
                 "name": "preset323",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11388,6 +11711,7 @@
             },
             "3": {
                 "name": "preset324",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11423,6 +11747,7 @@
             },
             "4": {
                 "name": "preset325",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11458,6 +11783,7 @@
             },
             "5": {
                 "name": "preset326",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11493,6 +11819,7 @@
             },
             "6": {
                 "name": "preset327",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11528,6 +11855,7 @@
             },
             "7": {
                 "name": "preset328",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11565,6 +11893,7 @@
         "bank41": {
             "0": {
                 "name": "preset329",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11600,6 +11929,7 @@
             },
             "1": {
                 "name": "preset330",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11635,6 +11965,7 @@
             },
             "2": {
                 "name": "preset331",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11670,6 +12001,7 @@
             },
             "3": {
                 "name": "preset332",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11705,6 +12037,7 @@
             },
             "4": {
                 "name": "preset333",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11740,6 +12073,7 @@
             },
             "5": {
                 "name": "preset334",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11775,6 +12109,7 @@
             },
             "6": {
                 "name": "preset335",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11810,6 +12145,7 @@
             },
             "7": {
                 "name": "preset336",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11847,6 +12183,7 @@
         "bank42": {
             "0": {
                 "name": "preset337",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11882,6 +12219,7 @@
             },
             "1": {
                 "name": "preset338",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11917,6 +12255,7 @@
             },
             "2": {
                 "name": "preset339",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11952,6 +12291,7 @@
             },
             "3": {
                 "name": "preset340",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -11987,6 +12327,7 @@
             },
             "4": {
                 "name": "preset341",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12022,6 +12363,7 @@
             },
             "5": {
                 "name": "preset342",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12057,6 +12399,7 @@
             },
             "6": {
                 "name": "preset343",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12092,6 +12435,7 @@
             },
             "7": {
                 "name": "preset344",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12129,6 +12473,7 @@
         "bank43": {
             "0": {
                 "name": "preset345",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12164,6 +12509,7 @@
             },
             "1": {
                 "name": "preset346",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12199,6 +12545,7 @@
             },
             "2": {
                 "name": "preset347",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12234,6 +12581,7 @@
             },
             "3": {
                 "name": "preset348",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12269,6 +12617,7 @@
             },
             "4": {
                 "name": "preset349",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12304,6 +12653,7 @@
             },
             "5": {
                 "name": "preset350",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12339,6 +12689,7 @@
             },
             "6": {
                 "name": "preset351",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12374,6 +12725,7 @@
             },
             "7": {
                 "name": "preset352",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12411,6 +12763,7 @@
         "bank44": {
             "0": {
                 "name": "preset353",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12446,6 +12799,7 @@
             },
             "1": {
                 "name": "preset354",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12481,6 +12835,7 @@
             },
             "2": {
                 "name": "preset355",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12516,6 +12871,7 @@
             },
             "3": {
                 "name": "preset356",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12551,6 +12907,7 @@
             },
             "4": {
                 "name": "preset357",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12586,6 +12943,7 @@
             },
             "5": {
                 "name": "preset358",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12621,6 +12979,7 @@
             },
             "6": {
                 "name": "preset359",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12656,6 +13015,7 @@
             },
             "7": {
                 "name": "preset360",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12693,6 +13053,7 @@
         "bank45": {
             "0": {
                 "name": "preset361",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12728,6 +13089,7 @@
             },
             "1": {
                 "name": "preset362",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12763,6 +13125,7 @@
             },
             "2": {
                 "name": "preset363",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12798,6 +13161,7 @@
             },
             "3": {
                 "name": "preset364",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12833,6 +13197,7 @@
             },
             "4": {
                 "name": "preset365",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12868,6 +13233,7 @@
             },
             "5": {
                 "name": "preset366",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12903,6 +13269,7 @@
             },
             "6": {
                 "name": "preset367",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12938,6 +13305,7 @@
             },
             "7": {
                 "name": "preset368",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -12975,6 +13343,7 @@
         "bank46": {
             "0": {
                 "name": "preset369",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13010,6 +13379,7 @@
             },
             "1": {
                 "name": "preset370",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13045,6 +13415,7 @@
             },
             "2": {
                 "name": "preset371",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13080,6 +13451,7 @@
             },
             "3": {
                 "name": "preset372",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13115,6 +13487,7 @@
             },
             "4": {
                 "name": "preset373",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13150,6 +13523,7 @@
             },
             "5": {
                 "name": "preset374",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13185,6 +13559,7 @@
             },
             "6": {
                 "name": "preset375",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13220,6 +13595,7 @@
             },
             "7": {
                 "name": "preset376",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13257,6 +13633,7 @@
         "bank47": {
             "0": {
                 "name": "preset377",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13292,6 +13669,7 @@
             },
             "1": {
                 "name": "preset378",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13327,6 +13705,7 @@
             },
             "2": {
                 "name": "preset379",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13362,6 +13741,7 @@
             },
             "3": {
                 "name": "preset380",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13397,6 +13777,7 @@
             },
             "4": {
                 "name": "preset381",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13432,6 +13813,7 @@
             },
             "5": {
                 "name": "preset382",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13467,6 +13849,7 @@
             },
             "6": {
                 "name": "preset383",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13502,6 +13885,7 @@
             },
             "7": {
                 "name": "preset384",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13539,6 +13923,7 @@
         "bank48": {
             "0": {
                 "name": "preset385",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13574,6 +13959,7 @@
             },
             "1": {
                 "name": "preset386",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13609,6 +13995,7 @@
             },
             "2": {
                 "name": "preset387",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13644,6 +14031,7 @@
             },
             "3": {
                 "name": "preset388",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13679,6 +14067,7 @@
             },
             "4": {
                 "name": "preset389",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13714,6 +14103,7 @@
             },
             "5": {
                 "name": "preset390",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13749,6 +14139,7 @@
             },
             "6": {
                 "name": "preset391",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13784,6 +14175,7 @@
             },
             "7": {
                 "name": "preset392",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13821,6 +14213,7 @@
         "bank49": {
             "0": {
                 "name": "preset393",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13856,6 +14249,7 @@
             },
             "1": {
                 "name": "preset394",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13891,6 +14285,7 @@
             },
             "2": {
                 "name": "preset395",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13926,6 +14321,7 @@
             },
             "3": {
                 "name": "preset396",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13961,6 +14357,7 @@
             },
             "4": {
                 "name": "preset397",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -13996,6 +14393,7 @@
             },
             "5": {
                 "name": "preset398",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14031,6 +14429,7 @@
             },
             "6": {
                 "name": "preset399",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14066,6 +14465,7 @@
             },
             "7": {
                 "name": "preset400",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14103,6 +14503,7 @@
         "bank50": {
             "0": {
                 "name": "preset401",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14138,6 +14539,7 @@
             },
             "1": {
                 "name": "preset402",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14173,6 +14575,7 @@
             },
             "2": {
                 "name": "preset403",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14208,6 +14611,7 @@
             },
             "3": {
                 "name": "preset404",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14243,6 +14647,7 @@
             },
             "4": {
                 "name": "preset405",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14278,6 +14683,7 @@
             },
             "5": {
                 "name": "preset406",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14313,6 +14719,7 @@
             },
             "6": {
                 "name": "preset407",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14348,6 +14755,7 @@
             },
             "7": {
                 "name": "preset408",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14385,6 +14793,7 @@
         "bank51": {
             "0": {
                 "name": "preset409",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14420,6 +14829,7 @@
             },
             "1": {
                 "name": "preset410",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14455,6 +14865,7 @@
             },
             "2": {
                 "name": "preset411",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14490,6 +14901,7 @@
             },
             "3": {
                 "name": "preset412",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14525,6 +14937,7 @@
             },
             "4": {
                 "name": "preset413",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14560,6 +14973,7 @@
             },
             "5": {
                 "name": "preset414",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14595,6 +15009,7 @@
             },
             "6": {
                 "name": "preset415",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14630,6 +15045,7 @@
             },
             "7": {
                 "name": "preset416",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14667,6 +15083,7 @@
         "bank52": {
             "0": {
                 "name": "preset417",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14702,6 +15119,7 @@
             },
             "1": {
                 "name": "preset418",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14737,6 +15155,7 @@
             },
             "2": {
                 "name": "preset419",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14772,6 +15191,7 @@
             },
             "3": {
                 "name": "preset420",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14807,6 +15227,7 @@
             },
             "4": {
                 "name": "preset421",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14842,6 +15263,7 @@
             },
             "5": {
                 "name": "preset422",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14877,6 +15299,7 @@
             },
             "6": {
                 "name": "preset423",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14912,6 +15335,7 @@
             },
             "7": {
                 "name": "preset424",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14949,6 +15373,7 @@
         "bank53": {
             "0": {
                 "name": "preset425",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -14984,6 +15409,7 @@
             },
             "1": {
                 "name": "preset426",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15019,6 +15445,7 @@
             },
             "2": {
                 "name": "preset427",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15054,6 +15481,7 @@
             },
             "3": {
                 "name": "preset428",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15089,6 +15517,7 @@
             },
             "4": {
                 "name": "preset429",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15124,6 +15553,7 @@
             },
             "5": {
                 "name": "preset430",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15159,6 +15589,7 @@
             },
             "6": {
                 "name": "preset431",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15194,6 +15625,7 @@
             },
             "7": {
                 "name": "preset432",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15231,6 +15663,7 @@
         "bank54": {
             "0": {
                 "name": "preset433",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15266,6 +15699,7 @@
             },
             "1": {
                 "name": "preset434",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15301,6 +15735,7 @@
             },
             "2": {
                 "name": "preset435",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15336,6 +15771,7 @@
             },
             "3": {
                 "name": "preset436",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15371,6 +15807,7 @@
             },
             "4": {
                 "name": "preset437",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15406,6 +15843,7 @@
             },
             "5": {
                 "name": "preset438",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15441,6 +15879,7 @@
             },
             "6": {
                 "name": "preset439",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15476,6 +15915,7 @@
             },
             "7": {
                 "name": "preset440",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15513,6 +15953,7 @@
         "bank55": {
             "0": {
                 "name": "preset441",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15548,6 +15989,7 @@
             },
             "1": {
                 "name": "preset442",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15583,6 +16025,7 @@
             },
             "2": {
                 "name": "preset443",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15618,6 +16061,7 @@
             },
             "3": {
                 "name": "preset444",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15653,6 +16097,7 @@
             },
             "4": {
                 "name": "preset445",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15688,6 +16133,7 @@
             },
             "5": {
                 "name": "preset446",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15723,6 +16169,7 @@
             },
             "6": {
                 "name": "preset447",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15758,6 +16205,7 @@
             },
             "7": {
                 "name": "preset448",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15795,6 +16243,7 @@
         "bank56": {
             "0": {
                 "name": "preset449",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15830,6 +16279,7 @@
             },
             "1": {
                 "name": "preset450",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15865,6 +16315,7 @@
             },
             "2": {
                 "name": "preset451",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15900,6 +16351,7 @@
             },
             "3": {
                 "name": "preset452",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15935,6 +16387,7 @@
             },
             "4": {
                 "name": "preset453",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -15970,6 +16423,7 @@
             },
             "5": {
                 "name": "preset454",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16005,6 +16459,7 @@
             },
             "6": {
                 "name": "preset455",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16040,6 +16495,7 @@
             },
             "7": {
                 "name": "preset456",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16077,6 +16533,7 @@
         "bank57": {
             "0": {
                 "name": "preset457",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16112,6 +16569,7 @@
             },
             "1": {
                 "name": "preset458",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16147,6 +16605,7 @@
             },
             "2": {
                 "name": "preset459",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16182,6 +16641,7 @@
             },
             "3": {
                 "name": "preset460",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16217,6 +16677,7 @@
             },
             "4": {
                 "name": "preset461",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16252,6 +16713,7 @@
             },
             "5": {
                 "name": "preset462",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16287,6 +16749,7 @@
             },
             "6": {
                 "name": "preset463",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16322,6 +16785,7 @@
             },
             "7": {
                 "name": "preset464",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16359,6 +16823,7 @@
         "bank58": {
             "0": {
                 "name": "preset465",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16394,6 +16859,7 @@
             },
             "1": {
                 "name": "preset466",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16429,6 +16895,7 @@
             },
             "2": {
                 "name": "preset467",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16464,6 +16931,7 @@
             },
             "3": {
                 "name": "preset468",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16499,6 +16967,7 @@
             },
             "4": {
                 "name": "preset469",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16534,6 +17003,7 @@
             },
             "5": {
                 "name": "preset470",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16569,6 +17039,7 @@
             },
             "6": {
                 "name": "preset471",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16604,6 +17075,7 @@
             },
             "7": {
                 "name": "preset472",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16641,6 +17113,7 @@
         "bank59": {
             "0": {
                 "name": "preset473",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16676,6 +17149,7 @@
             },
             "1": {
                 "name": "preset474",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16711,6 +17185,7 @@
             },
             "2": {
                 "name": "preset475",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16746,6 +17221,7 @@
             },
             "3": {
                 "name": "preset476",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16781,6 +17257,7 @@
             },
             "4": {
                 "name": "preset477",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16816,6 +17293,7 @@
             },
             "5": {
                 "name": "preset478",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16851,6 +17329,7 @@
             },
             "6": {
                 "name": "preset479",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16886,6 +17365,7 @@
             },
             "7": {
                 "name": "preset480",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16923,6 +17403,7 @@
         "bank60": {
             "0": {
                 "name": "preset481",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16958,6 +17439,7 @@
             },
             "1": {
                 "name": "preset482",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -16993,6 +17475,7 @@
             },
             "2": {
                 "name": "preset483",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17028,6 +17511,7 @@
             },
             "3": {
                 "name": "preset484",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17063,6 +17547,7 @@
             },
             "4": {
                 "name": "preset485",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17098,6 +17583,7 @@
             },
             "5": {
                 "name": "preset486",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17133,6 +17619,7 @@
             },
             "6": {
                 "name": "preset487",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17168,6 +17655,7 @@
             },
             "7": {
                 "name": "preset488",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17205,6 +17693,7 @@
         "bank61": {
             "0": {
                 "name": "preset489",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17240,6 +17729,7 @@
             },
             "1": {
                 "name": "preset490",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17275,6 +17765,7 @@
             },
             "2": {
                 "name": "preset491",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17310,6 +17801,7 @@
             },
             "3": {
                 "name": "preset492",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17345,6 +17837,7 @@
             },
             "4": {
                 "name": "preset493",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17380,6 +17873,7 @@
             },
             "5": {
                 "name": "preset494",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17415,6 +17909,7 @@
             },
             "6": {
                 "name": "preset495",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17450,6 +17945,7 @@
             },
             "7": {
                 "name": "preset496",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17487,6 +17983,7 @@
         "bank62": {
             "0": {
                 "name": "preset497",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17522,6 +18019,7 @@
             },
             "1": {
                 "name": "preset498",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17557,6 +18055,7 @@
             },
             "2": {
                 "name": "preset499",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17592,6 +18091,7 @@
             },
             "3": {
                 "name": "preset500",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17627,6 +18127,7 @@
             },
             "4": {
                 "name": "preset501",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17662,6 +18163,7 @@
             },
             "5": {
                 "name": "preset502",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17697,6 +18199,7 @@
             },
             "6": {
                 "name": "preset503",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17732,6 +18235,7 @@
             },
             "7": {
                 "name": "preset504",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17769,6 +18273,7 @@
         "bank63": {
             "0": {
                 "name": "preset505",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17804,6 +18309,7 @@
             },
             "1": {
                 "name": "preset506",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17839,6 +18345,7 @@
             },
             "2": {
                 "name": "preset507",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17874,6 +18381,7 @@
             },
             "3": {
                 "name": "preset508",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17909,6 +18417,7 @@
             },
             "4": {
                 "name": "preset509",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17944,6 +18453,7 @@
             },
             "5": {
                 "name": "preset510",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -17979,6 +18489,7 @@
             },
             "6": {
                 "name": "preset511",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18014,6 +18525,7 @@
             },
             "7": {
                 "name": "preset512",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18051,6 +18563,7 @@
         "bank64": {
             "0": {
                 "name": "preset513",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18086,6 +18599,7 @@
             },
             "1": {
                 "name": "preset514",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18121,6 +18635,7 @@
             },
             "2": {
                 "name": "preset515",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18156,6 +18671,7 @@
             },
             "3": {
                 "name": "preset516",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18191,6 +18707,7 @@
             },
             "4": {
                 "name": "preset517",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18226,6 +18743,7 @@
             },
             "5": {
                 "name": "preset518",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18261,6 +18779,7 @@
             },
             "6": {
                 "name": "preset519",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18296,6 +18815,7 @@
             },
             "7": {
                 "name": "preset520",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18333,6 +18853,7 @@
         "bank65": {
             "0": {
                 "name": "preset521",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18368,6 +18889,7 @@
             },
             "1": {
                 "name": "preset522",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18403,6 +18925,7 @@
             },
             "2": {
                 "name": "preset523",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18438,6 +18961,7 @@
             },
             "3": {
                 "name": "preset524",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18473,6 +18997,7 @@
             },
             "4": {
                 "name": "preset525",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18508,6 +19033,7 @@
             },
             "5": {
                 "name": "preset526",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18543,6 +19069,7 @@
             },
             "6": {
                 "name": "preset527",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18578,6 +19105,7 @@
             },
             "7": {
                 "name": "preset528",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18615,6 +19143,7 @@
         "bank66": {
             "0": {
                 "name": "preset529",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18650,6 +19179,7 @@
             },
             "1": {
                 "name": "preset530",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18685,6 +19215,7 @@
             },
             "2": {
                 "name": "preset531",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18720,6 +19251,7 @@
             },
             "3": {
                 "name": "preset532",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18755,6 +19287,7 @@
             },
             "4": {
                 "name": "preset533",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18790,6 +19323,7 @@
             },
             "5": {
                 "name": "preset534",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18825,6 +19359,7 @@
             },
             "6": {
                 "name": "preset535",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18860,6 +19395,7 @@
             },
             "7": {
                 "name": "preset536",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18897,6 +19433,7 @@
         "bank67": {
             "0": {
                 "name": "preset537",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18932,6 +19469,7 @@
             },
             "1": {
                 "name": "preset538",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -18967,6 +19505,7 @@
             },
             "2": {
                 "name": "preset539",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19002,6 +19541,7 @@
             },
             "3": {
                 "name": "preset540",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19037,6 +19577,7 @@
             },
             "4": {
                 "name": "preset541",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19072,6 +19613,7 @@
             },
             "5": {
                 "name": "preset542",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19107,6 +19649,7 @@
             },
             "6": {
                 "name": "preset543",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19142,6 +19685,7 @@
             },
             "7": {
                 "name": "preset544",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19179,6 +19723,7 @@
         "bank68": {
             "0": {
                 "name": "preset545",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19214,6 +19759,7 @@
             },
             "1": {
                 "name": "preset546",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19249,6 +19795,7 @@
             },
             "2": {
                 "name": "preset547",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19284,6 +19831,7 @@
             },
             "3": {
                 "name": "preset548",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19319,6 +19867,7 @@
             },
             "4": {
                 "name": "preset549",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19354,6 +19903,7 @@
             },
             "5": {
                 "name": "preset550",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19389,6 +19939,7 @@
             },
             "6": {
                 "name": "preset551",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19424,6 +19975,7 @@
             },
             "7": {
                 "name": "preset552",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19461,6 +20013,7 @@
         "bank69": {
             "0": {
                 "name": "preset553",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19496,6 +20049,7 @@
             },
             "1": {
                 "name": "preset554",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19531,6 +20085,7 @@
             },
             "2": {
                 "name": "preset555",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19566,6 +20121,7 @@
             },
             "3": {
                 "name": "preset556",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19601,6 +20157,7 @@
             },
             "4": {
                 "name": "preset557",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19636,6 +20193,7 @@
             },
             "5": {
                 "name": "preset558",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19671,6 +20229,7 @@
             },
             "6": {
                 "name": "preset559",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19706,6 +20265,7 @@
             },
             "7": {
                 "name": "preset560",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19743,6 +20303,7 @@
         "bank70": {
             "0": {
                 "name": "preset561",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19778,6 +20339,7 @@
             },
             "1": {
                 "name": "preset562",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19813,6 +20375,7 @@
             },
             "2": {
                 "name": "preset563",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19848,6 +20411,7 @@
             },
             "3": {
                 "name": "preset564",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19883,6 +20447,7 @@
             },
             "4": {
                 "name": "preset565",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19918,6 +20483,7 @@
             },
             "5": {
                 "name": "preset566",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19953,6 +20519,7 @@
             },
             "6": {
                 "name": "preset567",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -19988,6 +20555,7 @@
             },
             "7": {
                 "name": "preset568",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20025,6 +20593,7 @@
         "bank71": {
             "0": {
                 "name": "preset569",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20060,6 +20629,7 @@
             },
             "1": {
                 "name": "preset570",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20095,6 +20665,7 @@
             },
             "2": {
                 "name": "preset571",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20130,6 +20701,7 @@
             },
             "3": {
                 "name": "preset572",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20165,6 +20737,7 @@
             },
             "4": {
                 "name": "preset573",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20200,6 +20773,7 @@
             },
             "5": {
                 "name": "preset574",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20235,6 +20809,7 @@
             },
             "6": {
                 "name": "preset575",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20270,6 +20845,7 @@
             },
             "7": {
                 "name": "preset576",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20307,6 +20883,7 @@
         "bank72": {
             "0": {
                 "name": "preset577",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20342,6 +20919,7 @@
             },
             "1": {
                 "name": "preset578",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20377,6 +20955,7 @@
             },
             "2": {
                 "name": "preset579",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20412,6 +20991,7 @@
             },
             "3": {
                 "name": "preset580",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20447,6 +21027,7 @@
             },
             "4": {
                 "name": "preset581",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20482,6 +21063,7 @@
             },
             "5": {
                 "name": "preset582",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20517,6 +21099,7 @@
             },
             "6": {
                 "name": "preset583",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20552,6 +21135,7 @@
             },
             "7": {
                 "name": "preset584",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20589,6 +21173,7 @@
         "bank73": {
             "0": {
                 "name": "preset585",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20624,6 +21209,7 @@
             },
             "1": {
                 "name": "preset586",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20659,6 +21245,7 @@
             },
             "2": {
                 "name": "preset587",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20694,6 +21281,7 @@
             },
             "3": {
                 "name": "preset588",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20729,6 +21317,7 @@
             },
             "4": {
                 "name": "preset589",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20764,6 +21353,7 @@
             },
             "5": {
                 "name": "preset590",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20799,6 +21389,7 @@
             },
             "6": {
                 "name": "preset591",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20834,6 +21425,7 @@
             },
             "7": {
                 "name": "preset592",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20871,6 +21463,7 @@
         "bank74": {
             "0": {
                 "name": "preset593",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20906,6 +21499,7 @@
             },
             "1": {
                 "name": "preset594",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20941,6 +21535,7 @@
             },
             "2": {
                 "name": "preset595",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -20976,6 +21571,7 @@
             },
             "3": {
                 "name": "preset596",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21011,6 +21607,7 @@
             },
             "4": {
                 "name": "preset597",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21046,6 +21643,7 @@
             },
             "5": {
                 "name": "preset598",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21081,6 +21679,7 @@
             },
             "6": {
                 "name": "preset599",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21116,6 +21715,7 @@
             },
             "7": {
                 "name": "preset600",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21153,6 +21753,7 @@
         "bank75": {
             "0": {
                 "name": "preset601",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21188,6 +21789,7 @@
             },
             "1": {
                 "name": "preset602",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21223,6 +21825,7 @@
             },
             "2": {
                 "name": "preset603",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21258,6 +21861,7 @@
             },
             "3": {
                 "name": "preset604",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21293,6 +21897,7 @@
             },
             "4": {
                 "name": "preset605",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21328,6 +21933,7 @@
             },
             "5": {
                 "name": "preset606",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21363,6 +21969,7 @@
             },
             "6": {
                 "name": "preset607",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21398,6 +22005,7 @@
             },
             "7": {
                 "name": "preset608",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21435,6 +22043,7 @@
         "bank76": {
             "0": {
                 "name": "preset609",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21470,6 +22079,7 @@
             },
             "1": {
                 "name": "preset610",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21505,6 +22115,7 @@
             },
             "2": {
                 "name": "preset611",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21540,6 +22151,7 @@
             },
             "3": {
                 "name": "preset612",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21575,6 +22187,7 @@
             },
             "4": {
                 "name": "preset613",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21610,6 +22223,7 @@
             },
             "5": {
                 "name": "preset614",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21645,6 +22259,7 @@
             },
             "6": {
                 "name": "preset615",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21680,6 +22295,7 @@
             },
             "7": {
                 "name": "preset616",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21717,6 +22333,7 @@
         "bank77": {
             "0": {
                 "name": "preset617",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21752,6 +22369,7 @@
             },
             "1": {
                 "name": "preset618",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21787,6 +22405,7 @@
             },
             "2": {
                 "name": "preset619",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21822,6 +22441,7 @@
             },
             "3": {
                 "name": "preset620",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21857,6 +22477,7 @@
             },
             "4": {
                 "name": "preset621",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21892,6 +22513,7 @@
             },
             "5": {
                 "name": "preset622",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21927,6 +22549,7 @@
             },
             "6": {
                 "name": "preset623",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21962,6 +22585,7 @@
             },
             "7": {
                 "name": "preset624",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -21999,6 +22623,7 @@
         "bank78": {
             "0": {
                 "name": "preset625",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22034,6 +22659,7 @@
             },
             "1": {
                 "name": "preset626",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22069,6 +22695,7 @@
             },
             "2": {
                 "name": "preset627",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22104,6 +22731,7 @@
             },
             "3": {
                 "name": "preset628",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22139,6 +22767,7 @@
             },
             "4": {
                 "name": "preset629",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22174,6 +22803,7 @@
             },
             "5": {
                 "name": "preset630",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22209,6 +22839,7 @@
             },
             "6": {
                 "name": "preset631",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22244,6 +22875,7 @@
             },
             "7": {
                 "name": "preset632",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22281,6 +22913,7 @@
         "bank79": {
             "0": {
                 "name": "preset633",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22316,6 +22949,7 @@
             },
             "1": {
                 "name": "preset634",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22351,6 +22985,7 @@
             },
             "2": {
                 "name": "preset635",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22386,6 +23021,7 @@
             },
             "3": {
                 "name": "preset636",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22421,6 +23057,7 @@
             },
             "4": {
                 "name": "preset637",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22456,6 +23093,7 @@
             },
             "5": {
                 "name": "preset638",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22491,6 +23129,7 @@
             },
             "6": {
                 "name": "preset639",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22526,6 +23165,7 @@
             },
             "7": {
                 "name": "preset640",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22563,6 +23203,7 @@
         "bank80": {
             "0": {
                 "name": "preset641",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22598,6 +23239,7 @@
             },
             "1": {
                 "name": "preset642",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22633,6 +23275,7 @@
             },
             "2": {
                 "name": "preset643",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22668,6 +23311,7 @@
             },
             "3": {
                 "name": "preset644",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22703,6 +23347,7 @@
             },
             "4": {
                 "name": "preset645",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22738,6 +23383,7 @@
             },
             "5": {
                 "name": "preset646",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22773,6 +23419,7 @@
             },
             "6": {
                 "name": "preset647",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22808,6 +23455,7 @@
             },
             "7": {
                 "name": "preset648",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22845,6 +23493,7 @@
         "bank81": {
             "0": {
                 "name": "preset649",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22880,6 +23529,7 @@
             },
             "1": {
                 "name": "preset650",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22915,6 +23565,7 @@
             },
             "2": {
                 "name": "preset651",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22950,6 +23601,7 @@
             },
             "3": {
                 "name": "preset652",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -22985,6 +23637,7 @@
             },
             "4": {
                 "name": "preset653",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23020,6 +23673,7 @@
             },
             "5": {
                 "name": "preset654",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23055,6 +23709,7 @@
             },
             "6": {
                 "name": "preset655",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23090,6 +23745,7 @@
             },
             "7": {
                 "name": "preset656",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23127,6 +23783,7 @@
         "bank82": {
             "0": {
                 "name": "preset657",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23162,6 +23819,7 @@
             },
             "1": {
                 "name": "preset658",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23197,6 +23855,7 @@
             },
             "2": {
                 "name": "preset659",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23232,6 +23891,7 @@
             },
             "3": {
                 "name": "preset660",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23267,6 +23927,7 @@
             },
             "4": {
                 "name": "preset661",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23302,6 +23963,7 @@
             },
             "5": {
                 "name": "preset662",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23337,6 +23999,7 @@
             },
             "6": {
                 "name": "preset663",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23372,6 +24035,7 @@
             },
             "7": {
                 "name": "preset664",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23409,6 +24073,7 @@
         "bank83": {
             "0": {
                 "name": "preset665",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23444,6 +24109,7 @@
             },
             "1": {
                 "name": "preset666",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23479,6 +24145,7 @@
             },
             "2": {
                 "name": "preset667",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23514,6 +24181,7 @@
             },
             "3": {
                 "name": "preset668",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23549,6 +24217,7 @@
             },
             "4": {
                 "name": "preset669",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23584,6 +24253,7 @@
             },
             "5": {
                 "name": "preset670",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23619,6 +24289,7 @@
             },
             "6": {
                 "name": "preset671",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23654,6 +24325,7 @@
             },
             "7": {
                 "name": "preset672",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23691,6 +24363,7 @@
         "bank84": {
             "0": {
                 "name": "preset673",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23726,6 +24399,7 @@
             },
             "1": {
                 "name": "preset674",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23761,6 +24435,7 @@
             },
             "2": {
                 "name": "preset675",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23796,6 +24471,7 @@
             },
             "3": {
                 "name": "preset676",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23831,6 +24507,7 @@
             },
             "4": {
                 "name": "preset677",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23866,6 +24543,7 @@
             },
             "5": {
                 "name": "preset678",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23901,6 +24579,7 @@
             },
             "6": {
                 "name": "preset679",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23936,6 +24615,7 @@
             },
             "7": {
                 "name": "preset680",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -23973,6 +24653,7 @@
         "bank85": {
             "0": {
                 "name": "preset681",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24008,6 +24689,7 @@
             },
             "1": {
                 "name": "preset682",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24043,6 +24725,7 @@
             },
             "2": {
                 "name": "preset683",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24078,6 +24761,7 @@
             },
             "3": {
                 "name": "preset684",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24113,6 +24797,7 @@
             },
             "4": {
                 "name": "preset685",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24148,6 +24833,7 @@
             },
             "5": {
                 "name": "preset686",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24183,6 +24869,7 @@
             },
             "6": {
                 "name": "preset687",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24218,6 +24905,7 @@
             },
             "7": {
                 "name": "preset688",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24255,6 +24943,7 @@
         "bank86": {
             "0": {
                 "name": "preset689",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24290,6 +24979,7 @@
             },
             "1": {
                 "name": "preset690",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24325,6 +25015,7 @@
             },
             "2": {
                 "name": "preset691",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24360,6 +25051,7 @@
             },
             "3": {
                 "name": "preset692",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24395,6 +25087,7 @@
             },
             "4": {
                 "name": "preset693",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24430,6 +25123,7 @@
             },
             "5": {
                 "name": "preset694",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24465,6 +25159,7 @@
             },
             "6": {
                 "name": "preset695",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24500,6 +25195,7 @@
             },
             "7": {
                 "name": "preset696",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24537,6 +25233,7 @@
         "bank87": {
             "0": {
                 "name": "preset697",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24572,6 +25269,7 @@
             },
             "1": {
                 "name": "preset698",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24607,6 +25305,7 @@
             },
             "2": {
                 "name": "preset699",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24642,6 +25341,7 @@
             },
             "3": {
                 "name": "preset700",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24677,6 +25377,7 @@
             },
             "4": {
                 "name": "preset701",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24712,6 +25413,7 @@
             },
             "5": {
                 "name": "preset702",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24747,6 +25449,7 @@
             },
             "6": {
                 "name": "preset703",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24782,6 +25485,7 @@
             },
             "7": {
                 "name": "preset704",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24819,6 +25523,7 @@
         "bank88": {
             "0": {
                 "name": "preset705",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24854,6 +25559,7 @@
             },
             "1": {
                 "name": "preset706",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24889,6 +25595,7 @@
             },
             "2": {
                 "name": "preset707",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24924,6 +25631,7 @@
             },
             "3": {
                 "name": "preset708",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24959,6 +25667,7 @@
             },
             "4": {
                 "name": "preset709",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -24994,6 +25703,7 @@
             },
             "5": {
                 "name": "preset710",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25029,6 +25739,7 @@
             },
             "6": {
                 "name": "preset711",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25064,6 +25775,7 @@
             },
             "7": {
                 "name": "preset712",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25101,6 +25813,7 @@
         "bank89": {
             "0": {
                 "name": "preset713",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25136,6 +25849,7 @@
             },
             "1": {
                 "name": "preset714",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25171,6 +25885,7 @@
             },
             "2": {
                 "name": "preset715",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25206,6 +25921,7 @@
             },
             "3": {
                 "name": "preset716",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25241,6 +25957,7 @@
             },
             "4": {
                 "name": "preset717",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25276,6 +25993,7 @@
             },
             "5": {
                 "name": "preset718",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25311,6 +26029,7 @@
             },
             "6": {
                 "name": "preset719",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25346,6 +26065,7 @@
             },
             "7": {
                 "name": "preset720",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25383,6 +26103,7 @@
         "bank90": {
             "0": {
                 "name": "preset721",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25418,6 +26139,7 @@
             },
             "1": {
                 "name": "preset722",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25453,6 +26175,7 @@
             },
             "2": {
                 "name": "preset723",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25488,6 +26211,7 @@
             },
             "3": {
                 "name": "preset724",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25523,6 +26247,7 @@
             },
             "4": {
                 "name": "preset725",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25558,6 +26283,7 @@
             },
             "5": {
                 "name": "preset726",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25593,6 +26319,7 @@
             },
             "6": {
                 "name": "preset727",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25628,6 +26355,7 @@
             },
             "7": {
                 "name": "preset728",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25665,6 +26393,7 @@
         "bank91": {
             "0": {
                 "name": "preset729",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25700,6 +26429,7 @@
             },
             "1": {
                 "name": "preset730",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25735,6 +26465,7 @@
             },
             "2": {
                 "name": "preset731",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25770,6 +26501,7 @@
             },
             "3": {
                 "name": "preset732",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25805,6 +26537,7 @@
             },
             "4": {
                 "name": "preset733",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25840,6 +26573,7 @@
             },
             "5": {
                 "name": "preset734",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25875,6 +26609,7 @@
             },
             "6": {
                 "name": "preset735",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25910,6 +26645,7 @@
             },
             "7": {
                 "name": "preset736",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25947,6 +26683,7 @@
         "bank92": {
             "0": {
                 "name": "preset737",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -25982,6 +26719,7 @@
             },
             "1": {
                 "name": "preset738",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26017,6 +26755,7 @@
             },
             "2": {
                 "name": "preset739",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26052,6 +26791,7 @@
             },
             "3": {
                 "name": "preset740",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26087,6 +26827,7 @@
             },
             "4": {
                 "name": "preset741",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26122,6 +26863,7 @@
             },
             "5": {
                 "name": "preset742",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26157,6 +26899,7 @@
             },
             "6": {
                 "name": "preset743",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26192,6 +26935,7 @@
             },
             "7": {
                 "name": "preset744",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26229,6 +26973,7 @@
         "bank93": {
             "0": {
                 "name": "preset745",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26264,6 +27009,7 @@
             },
             "1": {
                 "name": "preset746",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26299,6 +27045,7 @@
             },
             "2": {
                 "name": "preset747",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26334,6 +27081,7 @@
             },
             "3": {
                 "name": "preset748",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26369,6 +27117,7 @@
             },
             "4": {
                 "name": "preset749",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26404,6 +27153,7 @@
             },
             "5": {
                 "name": "preset750",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26439,6 +27189,7 @@
             },
             "6": {
                 "name": "preset751",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26474,6 +27225,7 @@
             },
             "7": {
                 "name": "preset752",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26511,6 +27263,7 @@
         "bank94": {
             "0": {
                 "name": "preset753",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26546,6 +27299,7 @@
             },
             "1": {
                 "name": "preset754",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26581,6 +27335,7 @@
             },
             "2": {
                 "name": "preset755",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26616,6 +27371,7 @@
             },
             "3": {
                 "name": "preset756",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26651,6 +27407,7 @@
             },
             "4": {
                 "name": "preset757",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26686,6 +27443,7 @@
             },
             "5": {
                 "name": "preset758",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26721,6 +27479,7 @@
             },
             "6": {
                 "name": "preset759",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26756,6 +27515,7 @@
             },
             "7": {
                 "name": "preset760",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26793,6 +27553,7 @@
         "bank95": {
             "0": {
                 "name": "preset761",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26828,6 +27589,7 @@
             },
             "1": {
                 "name": "preset762",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26863,6 +27625,7 @@
             },
             "2": {
                 "name": "preset763",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26898,6 +27661,7 @@
             },
             "3": {
                 "name": "preset764",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26933,6 +27697,7 @@
             },
             "4": {
                 "name": "preset765",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -26968,6 +27733,7 @@
             },
             "5": {
                 "name": "preset766",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27003,6 +27769,7 @@
             },
             "6": {
                 "name": "preset767",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27038,6 +27805,7 @@
             },
             "7": {
                 "name": "preset768",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27075,6 +27843,7 @@
         "bank96": {
             "0": {
                 "name": "preset769",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27110,6 +27879,7 @@
             },
             "1": {
                 "name": "preset770",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27145,6 +27915,7 @@
             },
             "2": {
                 "name": "preset771",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27180,6 +27951,7 @@
             },
             "3": {
                 "name": "preset772",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27215,6 +27987,7 @@
             },
             "4": {
                 "name": "preset773",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27250,6 +28023,7 @@
             },
             "5": {
                 "name": "preset774",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27285,6 +28059,7 @@
             },
             "6": {
                 "name": "preset775",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27320,6 +28095,7 @@
             },
             "7": {
                 "name": "preset776",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27357,6 +28133,7 @@
         "bank97": {
             "0": {
                 "name": "preset777",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27392,6 +28169,7 @@
             },
             "1": {
                 "name": "preset778",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27427,6 +28205,7 @@
             },
             "2": {
                 "name": "preset779",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27462,6 +28241,7 @@
             },
             "3": {
                 "name": "preset780",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27497,6 +28277,7 @@
             },
             "4": {
                 "name": "preset781",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27532,6 +28313,7 @@
             },
             "5": {
                 "name": "preset782",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27567,6 +28349,7 @@
             },
             "6": {
                 "name": "preset783",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27602,6 +28385,7 @@
             },
             "7": {
                 "name": "preset784",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27639,6 +28423,7 @@
         "bank98": {
             "0": {
                 "name": "preset785",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27674,6 +28459,7 @@
             },
             "1": {
                 "name": "preset786",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27709,6 +28495,7 @@
             },
             "2": {
                 "name": "preset787",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27744,6 +28531,7 @@
             },
             "3": {
                 "name": "preset788",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27779,6 +28567,7 @@
             },
             "4": {
                 "name": "preset789",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27814,6 +28603,7 @@
             },
             "5": {
                 "name": "preset790",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27849,6 +28639,7 @@
             },
             "6": {
                 "name": "preset791",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27884,6 +28675,7 @@
             },
             "7": {
                 "name": "preset792",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27921,6 +28713,7 @@
         "bank99": {
             "0": {
                 "name": "preset793",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27956,6 +28749,7 @@
             },
             "1": {
                 "name": "preset794",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -27991,6 +28785,7 @@
             },
             "2": {
                 "name": "preset795",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -28026,6 +28821,7 @@
             },
             "3": {
                 "name": "preset796",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -28061,6 +28857,7 @@
             },
             "4": {
                 "name": "preset797",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -28096,6 +28893,7 @@
             },
             "5": {
                 "name": "preset798",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -28131,6 +28929,7 @@
             },
             "6": {
                 "name": "preset799",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
@@ -28166,6 +28965,7 @@
             },
             "7": {
                 "name": "preset800",
+                "color": "white",
                 "encoder": {
                     "channel": 0,
                     "value": 0
