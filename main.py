@@ -521,6 +521,8 @@ if __name__ == '__main__':
 							elif m[2] == 65:
 								ENCODERS[m[1] - 80] += 9
 							ENCODERS = [max(0, min(value, 127)) for value in ENCODERS] # cap the values in the list between 0 and 127
+							for i, encoder in enumerate(ENCODERS):
+								xt._send_midi('control_change', [i + 80, encoder, 0])
 							continue
 
 			e = md.get_data()
