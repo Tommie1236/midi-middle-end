@@ -78,7 +78,7 @@ class XTouch:
 		self.channelbank = 0 												# set the channel-bank to 0
 		self.presetsbank = 0 												# set the presets-bank to 0
 		self.mode = 'channel'												# set mode to channel
-		self.leds = [0 for _ in range(93)]									# create a list of 93 zeroes
+		self.leds = [0 for _ in range(94)]									# create a list of 94 zeroes
 
 	def close(self):
 		"""close the MIDI ports"""
@@ -183,7 +183,7 @@ class XTouch:
 		z - invert bottom
 		"""
 		self.backlight[display] = 0b00000
-		self.backlight[display] |= COLORS[color] << 0
+		self.backlight[display] |= COLORS[color.lower()] << 0
 		self.backlight[display] |= inv_top << 4
 		self.backlight[display] |= inv_bottom << 5
 
@@ -195,6 +195,11 @@ class XTouch:
 	def clear_scribble_strips(self):	# TODO docstring and comments
 		for i in range(8):
 			self.clear_scribble_strip(i)
+
+	def reset_scribble_strips(self):
+		for i in range(8):
+			self.set_scribble_strip_color(i, 'white')
+		self.clear_scribble_strips()
 
 	def set_scribble_strip_data(self, display: int, topidx: int, topchars: str, bottomidx: int, bottomchars: str):	# TODO docstring and comments
 		# set top display data
@@ -396,11 +401,12 @@ class Presets:	# TODO docstring and comments
 			with open(file, 'w') as file:
 				json.dump(self.data, file, indent)
 		else:
-			with open(self.file. 'w') as file:
+			with open(self.file, 'w') as file:
 				json.dump(self.data, file, indent)
 
 	def get_channel(self, bank: int, channel: int):
-		self.data[]
+		...
+		# self.data[]
 
 
 if __name__ == '__main__':
@@ -426,9 +432,21 @@ if __name__ == '__main__':
 		xt.led_all_on()
 		xt.all_faders_up()
 		xt.set_segment_data(0, '0123456789ab')
-		time.sleep(.5)
+		xt.set_scribble_strip_color(0, 'black')
+		xt.set_scribble_strip_color(1, 'red')
+		xt.set_scribble_strip_color(2, 'green')
+		xt.set_scribble_strip_color(3, 'yellow')
+		xt.set_scribble_strip_color(4, 'blue')
+		xt.set_scribble_strip_color(5, 'magenta')
+		xt.set_scribble_strip_color(6, 'cyan')
+		xt.set_scribble_strip_color(7, 'white')
+		for i in range(8):
+			xt.set_scribble_strip_data(i, 0, 'Display', 0, f'{i}')
+		
+		time.sleep(1)
 		xt.reset_controls()
 		xt.clear_segments_display()
+		xt.reset_scribble_strips()
 
 		xt.set_bank_nr('channel', 0)
 		xt.set_bank_nr('presets', 0)
@@ -437,9 +455,6 @@ if __name__ == '__main__':
 
 		xt.update_segment_display()
 		# Code in 3 lines below only for testing. Remove later.
-		for i in range(7):
-			xt.set_scribble_strip_color(i, 'white')
-			xt.set_scribble_strip_data(0, 0, 'Display', 0, f'{i}')
 
 
 
@@ -517,6 +532,7 @@ if __name__ == '__main__':
 	finally:
 		try:
 			xt.clear_segments_display()
+			xt.reset_scribble_strips()
 			xt.reset_controls()
 			xt.close()
 			md.close()
