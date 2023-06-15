@@ -9,18 +9,18 @@ def create_prefix_json(filename: str):
 
 	presetnum = 1
 	for bank in range(100):
-		presets['presets'][bank] = {}
+		presets['presets'][f"bank{bank}"] = {}
 		for channel in range(8):
-			presets['presets'][bank][channel] = {
+			presets['presets'][f"bank{bank}"][channel] = {
 				"name": f"preset{presetnum}",
-				"encoder": 0,
-				"encoder_led": 0,
-				"led_bar": 0,
-				"button_1": False,
-				"button_2": False,
-				"button_3": False,
-				"button_4": False,
-				"fader": 0}
+				"encoder": {"channel": 0, "value": 0},
+				"encoder_led": {"channel": 0, "value": 0},
+				"led_bar": {"channel": 0, "value": 0},
+				"button_1": {"channel": 0, "value": False},
+				"button_2": {"channel": 0, "value": False},
+				"button_3": {"channel": 0, "value": False},
+				"button_4": {"channel": 0, "value": False},
+				"fader": {"channel": 0, "value": 0}}
 
 			presetnum += 1
 	with open(filename, 'w') as file:
