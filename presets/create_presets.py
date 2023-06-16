@@ -11,7 +11,7 @@ def create_prefix_json(filename: str):
 	for bank in range(100):
 		presets['presets'][f"bank{bank}"] = {}
 		for channel in range(8):
-			presets['presets'][f"bank{bank}"][channel] = {
+			presets['presets'][f"bank{bank}"][f"channel{channel}"] = {
 				"name": f"preset{presetnum}",
 				"color": "white",
 				"encoder": {"channel": 0, "value": 0},
