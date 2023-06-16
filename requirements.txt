@@ -2,3 +2,4 @@ pygame
 prettyprinter
 termcolor
 keyboard
+dotwiz

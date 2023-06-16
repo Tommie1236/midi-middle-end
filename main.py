@@ -34,7 +34,7 @@ def debounce(lst):
 			result.append(lst[i])
 	return result
 
-def setup_midi():
+def setup_midi() -> tuple:
 	dev_count = pygame.midi.get_count()
 	if dev_count == 0: print('No MIDI devices found, exiting program.'); exit()
 
@@ -56,9 +56,9 @@ def setup_midi():
 				print('Invalid index input. Please enter a valid index (integer).')
 		return tuple(ports)
 		
-def setup_argparser():
+def setup_argparser() -> argparse.Namespace:
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-d', "--default-ports", action='store_true', help='use the default midi ports (xtouch 1, 6 mydmx 4, 8)') 
+	parser.add_argument('-d', "--default-ports", action='store_true', help='use the default midi ports (xtouch 1, 6 mydmx 4, 8)')
 	return parser.parse_args()
 
 
@@ -267,7 +267,7 @@ class XTouch:
 		data_in = self.input.read(10)
 		data = [[types[d[0][0]], *d[0][1:]] for d in data_in]
 
-		# compressed into list comprehention but if it gets problems the working code is commented below
+		# compressed below code into list comprehention above but if it gets problems the working code is commented below
 
 		# for d in data_in:
 		# 	m = d[0]
@@ -396,7 +396,8 @@ class Presets:	# TODO docstring and comments
 		with open(self.file, 'r') as file:
 			self.data = json.load(file)
 
-	def save(self, file: str, indent: int = 4):
+	def save(self, file: str = None, indent: int = 4):
+		if file is None: file = self.file
 		if file:
 			with open(file, 'w') as file:
 				json.dump(self.data, file, indent)
@@ -405,8 +406,7 @@ class Presets:	# TODO docstring and comments
 				json.dump(self.data, file, indent)
 
 	def get_channel(self, bank: int, channel: int):
-		...
-		# self.data[]
+		return self.data["presets"][f'bank{bank}'][channel]
 
 
 if __name__ == '__main__':
