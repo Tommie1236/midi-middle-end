@@ -6,9 +6,9 @@ with open('empty-presets.json', 'r') as file:
     json_data = DotWiz(json.load(file))
 
 # Access nested data using dot notation
-print(json_data.presets.bank0)  # Output: v
-print(json_data.presets.bank1)  # Output: 5
-print(f'{json_data.presets.bank0.channel0}')  # Output: 3.21
+print(json_data.presets.bank_0)  # Output: v
+print(json_data.presets.bank_1)  # Output: 5
+print(f'{json_data.presets.bank_0.channel_0}')  # Output: 3.21
 
 
 

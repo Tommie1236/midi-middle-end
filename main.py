@@ -1,8 +1,9 @@
 import argparse
+import json
 import os
 import time
-import json
 
+from dotwiz import DotWiz
 import keyboard
 import pygame
 import pygame.midi
@@ -201,23 +202,25 @@ class XTouch:
 			self.set_scribble_strip_color(i, 'white')
 		self.clear_scribble_strips()
 
-	def set_scribble_strip_data(self, display: int, topidx: int, topchars: str, bottomidx: int, bottomchars: str):	# TODO docstring and comments
+	def set_scribble_strip_data(self, display: int, topchars: str, bottomchars: str):	# TODO docstring and comments
 		# set top display data
+		topidx = 0
 		if not isinstance(topidx, int): self.warning(f'Topidx needs to be a integer.')
 		if topidx < 0 or topidx > 7: self.error(f'Character index <{topidx}> out of range. (0-7)')
 		if topidx + len(topchars) > 14: self.warning(f"Topchars: <{topchars}> doesn't fit in the display, characthers are cut off.")
 		
 		for char in topchars:
-			if topidx > 7: break
+			if topidx > 6: break
 			self.strips1[display][topidx] = ord(char)
 			topidx += 1
 		
+		bottomidx = 0
 		if not isinstance(bottomidx, int): self.warning(f'Bottomidx needs to be a integer.')
 		if bottomidx < 0 or bottomidx > 7: self.error(f'Character index <{bottomidx}> out of range. (0-7)')
 		if bottomidx + len(bottomchars) > 14: self.warning(f"Bottomchars: <{bottomchars}> doesn't fit in the display, characthers are cut off.")
 		
 		for char in bottomchars:
-			if bottomidx > 7: break
+			if bottomidx > 6: break
 			self.strips2[display][bottomidx] = ord(char)
 			bottomidx += 1
 
@@ -230,6 +233,8 @@ class XTouch:
 		if bank > 99: bank = 0
 		setattr(self, f'{self.mode}bank', bank)
 		self.set_segment_data(0, f'{bank:02d}')
+		bank_ = Bank(getattr(self, f'{self.mode}bank'))
+		bank_.load()
 		
 		# old one bank system below, maybe handy later to look back on. isn't needed in production anymore
 		# self.banknr += change
@@ -391,22 +396,29 @@ class Presets:	# TODO docstring and comments
 	def __init__(self):
 		self.data = {}
 
-	def load(self, file: str = 'presets.json'):
+	def load_file(self, file: str = 'presets.json'):
 		self.file = file
 		with open(self.file, 'r') as file:
 			self.data = json.load(file)
 
-	def save(self, file: str = None, indent: int = 4):
+	def save_file(self, file: str = None, indent: int = 4):
 		if file is None: file = self.file
-		if file:
-			with open(file, 'w') as file:
-				json.dump(self.data, file, indent)
-		else:
-			with open(self.file, 'w') as file:
-				json.dump(self.data, file, indent)
+		with open(file, 'w') as file:
+			json.dump(self.data, file, indent)
 
 	def get_channel(self, bank: int, channel: int):
-		return self.data["presets"][f'bank{bank}'][channel]
+		return self.data['presets'][f'bank_{bank}'][f'channel_{channel}']
+	
+	def load_bank(self, banknr):
+		return self.data['presets'][f'bank_{banknr}']
+	
+class Bank:
+	def __init__(self, banknr) -> None:
+		self.banknr = banknr
+	
+	def load(self):
+		for i in range(8):
+			xt.set_scribble_strip_data(i, str(i), presets.load_bank(self.banknr)[f'channel_{i}']['name'])
 
 
 if __name__ == '__main__':
@@ -424,6 +436,8 @@ if __name__ == '__main__':
 			xt = XTouch(*ports[0:2])
 			md = MyDmx (*ports[2:4])
 		bpm = BPM()
+		presets = Presets()
+		presets.load_file(r'presets/presets.json')
 		bpm.bpm_pulse()
 		# uncomment below if you want to launch mydmx
 		# os.startfile(r'C:\Users\Licht computer\Desktop\licht-files\aula_v_8.0.dvc')
@@ -441,7 +455,7 @@ if __name__ == '__main__':
 		xt.set_scribble_strip_color(6, 'cyan')
 		xt.set_scribble_strip_color(7, 'white')
 		for i in range(8):
-			xt.set_scribble_strip_data(i, 0, 'Display', 0, f'{i}')
+			xt.set_scribble_strip_data(i, 'Display', f'{i}')
 		
 		time.sleep(1)
 		xt.reset_controls()
