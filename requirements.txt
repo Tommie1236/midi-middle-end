@@ -1,2 +1,5 @@
-mido
-python-rtmidi
+pygame
+prettyprinter
+termcolor
+keyboard
+dotwiz
