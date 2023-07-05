@@ -60,6 +60,14 @@ class signals:
 		sgnl.past_out = []
 		sgnl.past_in = []
 
+	def confignew(sgnl):
+		sgnl.past_out.append(sgnl.lastknown_out)
+		sgnl.past_in.append(sgnl.lastknown_in)
+		sgnl.lastknown_out = "TEMP"
+		sgnl.lastknown_in = "TEMP"
+
+
+'''
 class signal_refresh:
 	def confignew():
 		lastknown_out = signals().lastknown_out
@@ -72,3 +80,4 @@ class signal_refresh:
 		lastknown_out = "SUCCES" # adaption here
 		signals().past_in = past_in
 		signals().past_out = past_out
+'''

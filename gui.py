@@ -79,54 +79,106 @@ class basic_screen(ctk.CTkFrame):
 		
 
 		## LABELS
-		label = ctk.CTkLabel(self, text='MIDIATOR', font=('Calibri', 20, 'bold'))
+		label = ctk.CTkLabel(self, 
+		    	text='MIDIATOR', 
+				font=('Calibri', 20, 'bold'))
 		label.grid(row=0,column=2,sticky='n', pady=10)
 		
-		mode_label = ctk.CTkLabel(self, text="MODE:", font=('Calibri', 20, 'bold'))
+		mode_label = ctk.CTkLabel(self, 
+			    text="MODE:", 
+				font=('Calibri', 20, 'bold'))
 		mode_label.grid(row=1, column=1)	
 
-		signal_label_lk = ctk.CTkLabel(self, text="LAST-KNOW SIGNALS:", font=('Calibri', 12, 'bold'))
+		signal_label_lk = ctk.CTkLabel(self, 
+				text="LAST-KNOW SIGNALS:", 
+				font=('Calibri', 12, 'bold'))
 		signal_label_lk.grid(row=5, column=1)
 
-		signal_label_mdin = ctk.CTkLabel(self, text="MIDI_IN:", font=('Calibri', 12))
+		signal_label_mdin = ctk.CTkLabel(self, 
+				text="MIDI_IN:", 
+				font=('Calibri', 12))
 		signal_label_mdin.grid(row=6, column=1)
 
-		signal_label_mdout = ctk.CTkLabel(self, text="MIDI_OUT:", font=('Calibri', 12))
+		signal_label_mdout = ctk.CTkLabel(self, 
+				text="MIDI_OUT:", 
+				font=('Calibri', 12))
 		signal_label_mdout.grid(row=7, column=1)
 
-		signal_label_in = ctk.CTkLabel(self, text=str(self.mdvar1), font=('Calibri', 12)) # code to change not written yet
+		signal_label_in = ctk.CTkLabel(self, 
+				text=str(self.mdvar1), 
+				font=('Calibri', 12))
 		signal_label_in.grid(row=6, column=2)
 
-		signal_label_out = ctk.CTkLabel(self, text=str(self.mdvar2), font=('Calibri', 12)) # code to change not written yet
+		signal_label_out = ctk.CTkLabel(self, 
+				text=str(self.mdvar2), 
+				font=('Calibri', 12))
 		signal_label_out.grid(row=7, column=2)
 
-		currmd_label = ctk.CTkLabel(self, text='CURRENT:', font=('Calibri', 20, 'bold')) # code to change not written yet
+		currmd_label = ctk.CTkLabel(self, 
+			    text='CURRENT:', 
+				font=('Calibri', 20, 'bold'))
 		currmd_label.grid(row=1, column=2)
 
-		currmd_disp_label = ctk.CTkLabel(self, text=str(self.cmode), font=('Calibri', 12)) # code to change not written yet
+		currmd_disp_label = ctk.CTkLabel(self, 
+				text=str(self.cmode), 
+				font=('Calibri', 12))
 		currmd_disp_label.grid(row=2, column=2)
 
-		bnk_label = ctk.CTkLabel(self, text='MENU:', font=('Calibri', 20, 'bold')) # code to change not written yet
+		bnk_label = ctk.CTkLabel(self, 
+				text='MENU:', 
+				font=('Calibri', 20, 'bold'))
 		bnk_label.grid(row=1, column=3)
 
-		cred_label = ctk.CTkLabel(self, text=str(fixed_values().credits), font=('Calibri', 8))
+		cred_label = ctk.CTkLabel(self, 
+			    text=str(fixed_values().credits), 
+				font=('Calibri', 8))
 		cred_label.grid(row=10,column=2,sticky='s')
 
 		## BUTTONS
-		signal_refresh_button = ctk.CTkButton(self, text="REFRESH", font=('Calibri', 10, 'bold'), command=self.refresh_btn, width=100, height=25, border_width=0, corner_radius=180)
+		signal_refresh_button = ctk.CTkButton(self, 
+				text="REFRESH", 
+				font=('Calibri', 10, 'bold'), 
+				command=self.refresh_btn, 
+				width=100, 
+				height=25, 
+				border_width=0, 
+				corner_radius=180)
 		signal_refresh_button.grid(row=5, column=2)
 
-		preset_bttn = ctk.CTkButton(self, text="PRESETS", font=('Calibri', 10, 'bold'), command=self.preset_btn, width=100, height=25, border_width=0, corner_radius=180)
+		preset_bttn = ctk.CTkButton(self, 
+			    text="PRESETS", 
+				font=('Calibri', 10, 'bold'), 
+				command=self.preset_btn, 
+				width=100, 
+				height=25, 
+				border_width=0, 
+				corner_radius=180)
 		preset_bttn.grid(column=1, row=2)
 
-		chnl_bttn = ctk.CTkButton(self, text="CHANNELS", font=('Calibri', 10, 'bold'), command=self.chnl_btn, width=100, height=25, border_width=0, corner_radius=180)
+		chnl_bttn = ctk.CTkButton(self, 
+			    text="CHANNELS", 
+				font=('Calibri', 10, 'bold'), 
+				command=self.chnl_btn, 
+				width=100, height=25, 
+				border_width=0, 
+				corner_radius=180)
 		chnl_bttn.grid(column=1, row=3)
 
-		bank_bttn = ctk.CTkButton(self, text="BANK", font=('Calibri', 10, 'bold'), command=lambda: master.framecall(master.bank_selector), width=100, height=25, border_width=0, corner_radius=180)
+		bank_bttn = ctk.CTkButton(self, 
+			    text="BANK", 
+				font=('Calibri', 10, 'bold'), 
+				command=lambda: master.framecall(master.bank_selector), 
+				width=100, height=25, 
+				border_width=0, 
+				corner_radius=180)
 		bank_bttn.grid(row=2, column=3)
 
+## code not working, check the backend aswell
 	def refresh_btn(self):
-		gui_backend.signal_refresh.confignew()
+		gui_backend.signals().confignew()
+		self.mdvar1 = gui_backend.signals().lastknown_in
+		self.mdvar2 = gui_backend.signals().lastknown_out
+		print(self.mdvar1)
 		self.reprint()
 
 	def preset_btn(self):
@@ -141,13 +193,19 @@ class basic_screen(ctk.CTkFrame):
 
 	def reprint(self):
 		# NOT INITIAL, ONLY IF VALUE CHANGES
-		signal_label_in = ctk.CTkLabel(self, text=str(self.mdvar1), font=('Calibri', 12)) # code to change not written yet
+		signal_label_in = ctk.CTkLabel(self, 
+				text=str(self.mdvar1), 
+				font=('Calibri', 12)) # code to change not written yet
 		signal_label_in.grid(row=6, column=2)
 
-		signal_label_out = ctk.CTkLabel(self, text=str(self.mdvar2), font=('Calibri', 12)) # code to change not written yet
+		signal_label_out = ctk.CTkLabel(self, 
+				text=str(self.mdvar2), 
+				font=('Calibri', 12)) # code to change not written yet
 		signal_label_out.grid(row=7, column=2)
 
-		currmd_disp_label = ctk.CTkLabel(self, text=str(self.cmode), font=('Calibri', 12,)) # code to change not written yet
+		currmd_disp_label = ctk.CTkLabel(self, 
+				text=str(self.cmode), 
+				font=('Calibri', 12,)) # code to change not written yet
 		currmd_disp_label.grid(row=2, column=2, ipadx=30)
 		
 
@@ -259,13 +317,13 @@ class bankselector(ctk.CTkFrame):
 		btn2_7.place(x=200, y=220)
 
 		# BUTTONS
-		btn_bankdwn = ctk.CTkButton(self, text="DOWN", command=gui_backend.bankbuttons_backend.btn_dwn, font=('Calibri', 20, 'bold'), width=100, height=25, border_width=0, corner_radius=180)
+		btn_bankdwn = ctk.CTkButton(self, text="DOWN", command=gui_backend.bankbuttons_backend.btn_dwn, font=('Calibri', 18, 'bold'), width=100, height=30, border_width=0, corner_radius=180)
 		btn_bankdwn.place(x=280, y=180)
 
-		btn_bankup = ctk.CTkButton(self, text="UP", command=gui_backend.bankbuttons_backend.btn_up, font=('Calibri', 20, 'bold'), width=100, height=25, border_width=0, corner_radius=180)
+		btn_bankup = ctk.CTkButton(self, text="UP", command=gui_backend.bankbuttons_backend.btn_up, font=('Calibri', 18, 'bold'), width=100, height=30, border_width=0, corner_radius=180)
 		btn_bankup.place(x=280, y=120)
 
-		btn_back = ctk.CTkButton(self, text="BACK", font=('Calibri', 20, 'bold'), command=lambda: master.framecall(master.basic_screen), width=100, height=25, border_width=0, corner_radius=180)
+		btn_back = ctk.CTkButton(self, text="BACK", font=('Calibri', 18, 'bold'), command=lambda: master.framecall(master.basic_screen), width=100, height=30, border_width=0, corner_radius=180)
 		btn_back.place(x=150, y=350)
 
 	def menubar(self, master):
@@ -288,7 +346,7 @@ class bankselector(ctk.CTkFrame):
 class gui_bootstrap:
 	def startup():
 		startup = App()
-		startup.wm_title("midiator")
+		startup.wm_title("Midiator")
 		startup.geometry("400x400")
 		startup.resizable(False, False)
 		startup.iconphoto(False, tk.PhotoImage(file="gui_assets/mdlogo.png")) 
