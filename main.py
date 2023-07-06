@@ -468,12 +468,9 @@ if __name__ == '__main__':
 
 
 		xt.update_segment_display()
-		# Code in 3 lines below only for testing. Remove later.
 
 
 
-
-		# just send everyting to the other midi port
 		while True:
 			d = xt.get_data()
 			if d:
@@ -484,7 +481,7 @@ if __name__ == '__main__':
 							case 92:	# bankdown button
 								if m[2] == 127: xt.update_bank(-1); xt.led_on(84)
 								elif m[2] == 0: xt.led_off(84)
-								continue 
+								continue
 							case 93:	# bankup button
 								if m[2] == 127: xt.update_bank(1); xt.led_on(85)
 								elif m[2] == 0: xt.led_off(85)

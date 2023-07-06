@@ -85,50 +85,60 @@ class basic_screen(ctk.CTkFrame):
 				font=('Calibri', 20, 'bold'))
 		label.grid(row=0,column=2,sticky='n', pady=10)
 		
+
 		mode_label = ctk.CTkLabel(self, 
 			    text="MODE:", 
 				font=('Calibri', 20, 'bold'))
 		mode_label.grid(row=1, column=1)	
+
 
 		signal_label_lk = ctk.CTkLabel(self, 
 				text="LAST-KNOW SIGNALS:", 
 				font=('Calibri', 12, 'bold'))
 		signal_label_lk.grid(row=5, column=1)
 
+
 		signal_label_mdin = ctk.CTkLabel(self, 
 				text="MIDI_IN:", 
 				font=('Calibri', 12))
 		signal_label_mdin.grid(row=6, column=1)
+
 
 		signal_label_mdout = ctk.CTkLabel(self, 
 				text="MIDI_OUT:", 
 				font=('Calibri', 12))
 		signal_label_mdout.grid(row=7, column=1)
 
-		signal_label_in = ctk.CTkLabel(self, 
+
+		self.signal_label_in = ctk.CTkLabel(self, 
 				text=str(self.mdvar1), 
 				font=('Calibri', 12))
-		signal_label_in.grid(row=6, column=2)
+		self.signal_label_in.grid(row=6, column=2)
 
-		signal_label_out = ctk.CTkLabel(self, 
+
+		self.signal_label_out = ctk.CTkLabel(self, 
 				text=str(self.mdvar2), 
 				font=('Calibri', 12))
-		signal_label_out.grid(row=7, column=2)
+		self.signal_label_out.grid(row=7, column=2)
+
 
 		currmd_label = ctk.CTkLabel(self, 
 			    text='CURRENT:', 
 				font=('Calibri', 20, 'bold'))
 		currmd_label.grid(row=1, column=2)
 
-		currmd_disp_label = ctk.CTkLabel(self, 
+
+		self.currmd_disp_label = ctk.CTkLabel(self, 
 				text=str(self.cmode), 
 				font=('Calibri', 12))
-		currmd_disp_label.grid(row=2, column=2)
+		self.currmd_disp_label.grid(row=2, column=2)
+
 
 		bnk_label = ctk.CTkLabel(self, 
 				text='MENU:', 
 				font=('Calibri', 20, 'bold'))
 		bnk_label.grid(row=1, column=3)
+
 
 		cred_label = ctk.CTkLabel(self, 
 			    text=str(fixed_values().credits), 
@@ -194,21 +204,12 @@ class basic_screen(ctk.CTkFrame):
 
 	def reprint(self):
 		# NOT INITIAL, ONLY IF VALUE CHANGES
-		signal_label_in = ctk.CTkLabel(self, 
-				text=str(self.mdvar1), 
-				font=('Calibri', 12)) # code to change not written yet
-		signal_label_in.grid(row=6, column=2)
+		self.signal_label_in.configure(text=str(self.mdvar1))
 
-		signal_label_out = ctk.CTkLabel(self, 
-				text=str(self.mdvar2), 
-				font=('Calibri', 12)) # code to change not written yet
-		signal_label_out.grid(row=7, column=2)
+		self.signal_label_out.configure(text=str(self.mdvar2))
 
-		currmd_disp_label = ctk.CTkLabel(self, 
-				text=str(self.cmode), 
-				font=('Calibri', 12,)) # code to change not written yet
-		currmd_disp_label.grid(row=2, column=2, ipadx=30)
-				
+		self.currmd_disp_label.configure(text=str(self.cmode))
+
 
 	def menubar(self, master):
 		menubar = Menu(master, bd=3, relief=RAISED, activebackground="#90cded")
@@ -265,7 +266,6 @@ class bankselector(ctk.CTkFrame):
 		bank_lbl = ctk.CTkLabel(self, text='BANK SELECTOR', font=('Calibri', 20, 'bold'))
 		bank_lbl.place(relx=0.5,  rely=0.05,  anchor=N)
 
-
 		# SERIE 1
 		btn1_1 = ctk.CTkButton(self, 
 				text="", 
@@ -276,6 +276,7 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn1_1.place(x=80, y=100)
 
+
 		btn1_2 = ctk.CTkButton(self, 
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn1_2, 
@@ -284,6 +285,7 @@ class bankselector(ctk.CTkFrame):
 				border_width=0, 
 				corner_radius=180)
 		btn1_2.place(x=50, y=130)
+
 
 		btn1_3 = ctk.CTkButton(self, 
 				text="", 
@@ -294,6 +296,7 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn1_3.place(x=110, y=130)
 
+
 		btn1_4 = ctk.CTkButton(self, 
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn1_4, 
@@ -302,6 +305,7 @@ class bankselector(ctk.CTkFrame):
 				border_width=0, 
 				corner_radius=180)
 		btn1_4.place(x=80, y=160)
+
 
 		btn1_5 = ctk.CTkButton(self, 
 				text="", 
@@ -312,6 +316,7 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn1_5.place(x=50, y=190)
 
+
 		btn1_6 = ctk.CTkButton(self, 
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn1_6, 
@@ -321,13 +326,14 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn1_6.place(x=110, y=190)
 
+
 		btn1_7 = ctk.CTkButton(self, 
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn1_7, 
 				width=25, 
 				height=10, 
 				border_width=0, 
-				orner_radius=180)
+				corner_radius=180)
 		btn1_7.place(x=80, y=220)
 
 		# SERIE 2
@@ -340,6 +346,7 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn2_1.place(x=200, y=100)
 
+
 		btn2_2 = ctk.CTkButton(self, 
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn2_2, 
@@ -348,6 +355,7 @@ class bankselector(ctk.CTkFrame):
 				border_width=0, 
 				corner_radius=180)
 		btn2_2.place(x=170, y=130)
+
 
 		btn2_3 = ctk.CTkButton(self, 
 				text="", 
@@ -358,6 +366,7 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn2_3.place(x=230, y=130)
 
+
 		btn2_4 = ctk.CTkButton(self,
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn2_4, 
@@ -366,6 +375,7 @@ class bankselector(ctk.CTkFrame):
 				border_width=0, 
 				corner_radius=180)
 		btn2_4.place(x=200, y=160)
+
 
 		btn2_5 = ctk.CTkButton(self, 
 				text="", 
@@ -376,6 +386,7 @@ class bankselector(ctk.CTkFrame):
 				corner_radius=180)
 		btn2_5.place(x=170, y=190)
 
+
 		btn2_6 = ctk.CTkButton(self, 
 				text="", 
 				command=gui_backend.bankbuttons_backend.btn2_6, 
@@ -384,6 +395,7 @@ class bankselector(ctk.CTkFrame):
 				border_width=0, 
 				corner_radius=180)
 		btn2_6.place(x=230, y=190)
+
 
 		btn2_7 = ctk.CTkButton(self, 
 				text="", 
@@ -421,7 +433,6 @@ class bankselector(ctk.CTkFrame):
 		return menubar
 
 
-
 class gui_bootstrap:
 	def __init__(self):
 		#self.btscrn = gui_start.splashscreen()
@@ -442,7 +453,6 @@ class gui_bootstrap:
 		self.app_gui.geometry("400x400")
 		self.app_gui.resizable(False, False)
 		self.app_gui.iconphoto(False, tk.PhotoImage(file="gui_assets/mdlogo.png"))
-		
 		return self.app_gui
 		
 if __name__ == '__main__':
