@@ -3,5 +3,9 @@ from tkinter import *
 #from PIL import ImageTk, Image
 
 
-class splashscreen(ctk.CTk):
-    pass
+class splashscreen(ctk.CTkToplevel):
+    def __init__(self):
+        ctk.CTkToplevel.__init__(self)
+        print('test')
+
+        self.update()

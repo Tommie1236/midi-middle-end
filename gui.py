@@ -8,6 +8,7 @@ import customtkinter as ctk
 import tkinter as tk
 from tkinter import *
 import gui_backend
+import gui_start
 
 ctk.set_appearance_mode("system")  # Modes: system (default), light, dark
 ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
@@ -178,7 +179,7 @@ class basic_screen(ctk.CTkFrame):
 		gui_backend.signals().confignew()
 		self.mdvar1 = gui_backend.signals().lastknown_in
 		self.mdvar2 = gui_backend.signals().lastknown_out
-		print(self.mdvar1)
+		#print(self.mdvar1)
 		self.reprint()
 
 	def preset_btn(self):
@@ -207,14 +208,7 @@ class basic_screen(ctk.CTkFrame):
 				text=str(self.cmode), 
 				font=('Calibri', 12,)) # code to change not written yet
 		currmd_disp_label.grid(row=2, column=2, ipadx=30)
-		
-
-	def cngtemp(self):
-		print("update succesfull")
-		self.mdvar1 += 1
-		self.mdvar2 += 5
-		self.reprint()
-		
+				
 
 	def menubar(self, master):
 		menubar = Menu(master, bd=3, relief=RAISED, activebackground="#90cded")
@@ -343,18 +337,35 @@ class bankselector(ctk.CTkFrame):
 		return menubar
 
 
+
+
+
 class gui_bootstrap:
-	def startup():
-		startup = App()
-		startup.wm_title("Midiator")
-		startup.geometry("400x400")
-		startup.resizable(False, False)
-		startup.iconphoto(False, tk.PhotoImage(file="gui_assets/mdlogo.png")) 
-		startup.mainloop() 
+	def __init__(self):
+		#self.btscrn = gui_start.splashscreen()
+		self.app_gui = App()
+		self.startup_handler()
+		
 
+	def startup_handler(self):
+		self.mainwindow_initiation()
+		#self.btscrn
+		self.app_gui.mainloop()
+		#self.btscrn.destroy()
+		#self.app_gui.deiconify()
 
+	def mainwindow_initiation(self):
+		#self.app_gui.withdraw()
+		self.app_gui.wm_title("Midiator")
+		self.app_gui.geometry("400x400")
+		self.app_gui.resizable(False, False)
+		self.app_gui.iconphoto(False, tk.PhotoImage(file="gui_assets/mdlogo.png"))
+		
+		return self.app_gui
+		
 if __name__ == '__main__':
-	gui_bootstrap.startup()
+	gui_bootstrap()
+
         
    
        
