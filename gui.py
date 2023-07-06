@@ -267,47 +267,131 @@ class bankselector(ctk.CTkFrame):
 
 
 		# SERIE 1
-		btn1_1 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_1, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_1 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_1, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn1_1.place(x=80, y=100)
 
-		btn1_2 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_2, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_2 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_2, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn1_2.place(x=50, y=130)
 
-		btn1_3 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_3, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_3 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_3, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn1_3.place(x=110, y=130)
 
-		btn1_4 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_4, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_4 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_4, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn1_4.place(x=80, y=160)
 
-		btn1_5 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_5, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_5 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_5, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn1_5.place(x=50, y=190)
 
-		btn1_6 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_6, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_6 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_6, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn1_6.place(x=110, y=190)
 
-		btn1_7 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn1_7, width=25, height=10, border_width=0, corner_radius=180)
+		btn1_7 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn1_7, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				orner_radius=180)
 		btn1_7.place(x=80, y=220)
 
 		# SERIE 2
-		btn2_1 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_1, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_1 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_1, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_1.place(x=200, y=100)
 
-		btn2_2 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_2, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_2 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_2, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_2.place(x=170, y=130)
 
-		btn2_3 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_3, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_3 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_3, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_3.place(x=230, y=130)
 
-		btn2_4 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_4, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_4 = ctk.CTkButton(self,
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_4, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_4.place(x=200, y=160)
 
-		btn2_5 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_5, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_5 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_5, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_5.place(x=170, y=190)
 
-		btn2_6 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_6, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_6 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_6, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_6.place(x=230, y=190)
 
-		btn2_7 = ctk.CTkButton(self, text="", command=gui_backend.bankbuttons_backend.btn2_7, width=25, height=10, border_width=0, corner_radius=180)
+		btn2_7 = ctk.CTkButton(self, 
+				text="", 
+				command=gui_backend.bankbuttons_backend.btn2_7, 
+				width=25, 
+				height=10, 
+				border_width=0, 
+				corner_radius=180)
 		btn2_7.place(x=200, y=220)
 
 		# BUTTONS
@@ -335,8 +419,6 @@ class bankselector(ctk.CTkFrame):
 		help_menu.add_command(label="Help window", command=lambda: master.framecall(master.help_page))
 
 		return menubar
-
-
 
 
 
