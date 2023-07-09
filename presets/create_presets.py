@@ -14,14 +14,14 @@ def create_prefix_json(filename: str):
 			presets['presets'][f"bank_{bank}"][f"channel_{channel}"] = {
 				"name": f"preset{presetnum}",
 				"color": "white",
-				"encoder": {"channel": 0, "value": 0},
-				"encoder_led": {"channel": 0, "value": 0},
-				"led_bar": {"channel": 0, "value": 0},
-				"button_1": {"channel": 0, "value": False},
-				"button_2": {"channel": 0, "value": False},
-				"button_3": {"channel": 0, "value": False},
-				"button_4": {"channel": 0, "value": False},
-				"fader": {"channel": 0, "value": 0}}
+				"encoder": {"value": 0},
+				"encoder_led": {"value": 0},
+				"led_bar": {"value": 0},
+				"button_1": {"value": False},
+				"button_2": {"value": False},
+				"button_3": {"value": False},
+				"button_4": {"value": False},
+				"fader": {"value": 0}}
 
 			presetnum += 1
 	with open(filename, 'w') as file:
