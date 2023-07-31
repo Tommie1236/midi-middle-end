@@ -35,9 +35,10 @@ SEGMENTS = {
     ' ': 0b0000000
 }
 
-# the below are not possible
+# The below are not possible:
 # k, m, v, w, z
-# some are possible but are the same as others
-# like v or w, they are the same as u
-# and z it is the same as 2
-# the letters k and m are just not possible 
+# Some are possible but are the same as others:
+# Like v, it is the same as u.
+# And z, it is the same as 2.
+# The letters k, m and w are just not possible with a 7 segment display.
+# If you know a better "font" or can inplement more letters and keep everyting readable please create a github issue or pull request. 
