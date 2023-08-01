@@ -1,0 +1,2 @@
+- create a dict with buttons and their function/args to call in the helper.py (or maybe the config json oid) file
+also add a little explaination for others to edit it
