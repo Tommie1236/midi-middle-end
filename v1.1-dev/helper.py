@@ -1,5 +1,15 @@
-# stores some helper data for the other files
+# FUNCTIONS
 
+def centerString(string: str, length: int = 7) -> str:
+    if len(string) >= length:
+        return string[:length]
+    else:
+        left_padding = (length - len(string)) // 2
+        right_padding = length - len(string) - left_padding
+        return ' ' * left_padding + string + ' ' * right_padding
+
+
+# CONSTANTS
 
 # backlight colors
 COLORS = {
@@ -12,9 +22,6 @@ COLORS = {
 		'magenta': 0b101,
 		'cyan'	 : 0b110,
 		'white'	 : 0b111}
-
-
-
 
 # 7-segment display chars
 #          GFEDCBA
