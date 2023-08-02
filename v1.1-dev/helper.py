@@ -11,6 +11,12 @@ def centerString(string: str, length: int = 7) -> str:
 
 # CONSTANTS
 
+# used midi message types
+MIDITYPES = {
+			'note_on': 0x90,
+			'note_off': 0x80,
+			'control_change': 0xb0}
+
 # backlight colors
 COLORS = {
 		'off'	 : 0b000,
