@@ -76,7 +76,7 @@ def load_banks(mode):
 
 
 class XTouch:
-	def __init__ (self, ip_port, op_port) -> None:
+	def __init__(self, ip_port, op_port) -> None:
 		"""Initiate a connection with the 'behringer x-touch one' MIDI controller"""
 		self.ip_port = ip_port
 		self.op_port = op_port
@@ -200,8 +200,8 @@ class XTouch:
 		self.backlight[display] |= inv_bottom << 5
 
 	def clear_scribble_strip(self, display: int) -> None:	# TODO docstring and comments
-		self.strips1[display] = [0b00 for _ in range(7)]
-		self.strips2[display] = [0b00 for _ in range(7)]
+		self.strips1[display] = [0x00 for _ in range(7)]
+		self.strips2[display] = [0x00 for _ in range(7)]
 		self.update_scribble_strip(display)
 
 	def clear_scribble_strips(self) -> None:	# TODO docstring and comments
@@ -278,7 +278,6 @@ class XTouch:
 			0x90: 'note_on',
 			0x80: 'note_off',
 			0xb0: 'control_change'}
-
 		data_in = self.input.read(10)
 		data = [[types[d[0][0]], *d[0][1:]] for d in data_in]
 
