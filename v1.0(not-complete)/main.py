@@ -240,13 +240,14 @@ class XTouch:
 	def update_bank(self ,change: int) -> None:	# TODO docstring and comments
 		bank = getattr(self, f'{self.mode}bank')
 		bank += change
-		if self.mode == 'preset':
+		if self.mode == 'presets':
 			if bank < 0: bank = 99
 			if bank > 99: bank = 0
 		elif self.mode == 'channel':
-			if bank < 0: bank = 64
-			if bank > 64: bank = 0
+			if bank < 0: bank = 63
+			if bank > 63: bank = 0
 		setattr(self, f'{self.mode}bank', bank)
+		print(f'{self.mode}bank = {bank}')
 		self.set_segment_data(0, f'{bank:02d}')
 
 	def set_bank_nr(self, bank: str, number: int) -> None:	# TODO docstring and comments
@@ -264,13 +265,15 @@ class XTouch:
 			self.led_on(86)
 			self.led_off(87)
 			self.set_segment_data(0, f'{self.channelbank:02d}')
+			print('Mode updated to <CHANNEL>')
 		elif self.mode == 'presets':
 			self.led_on(87)
 			self.led_off(86)
 			self.set_segment_data(0, f'{self.presetsbank:02d}')
+			print('Mode updated to <PRESETS>')
 		else:
 			self.mode = org_mode
-			self.error(f'Mode <{mode}> Invalid, Stayting on <{self.mode}>')
+			self.error(f'Mode <{mode}> Invalid, Staying on <{self.mode}>')
 		self.set_segment_data(2, f'{self.mode:7}')
 
 	def get_data(self) -> list:	# TODO docstring and comments
@@ -439,7 +442,7 @@ if __name__ == '__main__':
 			md = MyDmx (4, 8)	# 4, 8
 		else:
 			ports: tuple = setup_midi()
-			print(ports)
+			print(f'ports: {ports}')
 			xt = XTouch(*ports[0:2])
 			md = MyDmx (*ports[2:4])
 		bpm = BPM()
@@ -492,10 +495,10 @@ if __name__ == '__main__':
 								elif m[2] == 0: xt.led_off(85)
 								continue
 							case 94:	# channels button
-								xt.update_mode('channel')
+								if m[2] == 127: xt.update_mode('channel')
 								continue
 							case 95: 	# presets button
-								xt.update_mode('presets')
+								if m[2] == 127: xt.update_mode('presets')
 								continue
 							case 101:	# bpm button
 								if m[2] == 127:
