@@ -18,6 +18,9 @@ from helper import SEGMENTS, COLORS, MIDITYPES, centerString
 
 
 
+
+# main classes
+
 class MidiDevice:
 	_output: pygame.midi.Output
 	_input: pygame.midi.Input
@@ -55,9 +58,9 @@ class MidiDevice:
 	def getData(self) -> list:
 		dataIn = self._input.read(10) # change if needed
 		data = [[MIDITYPES[d[0][0]], *d[0][1]] for d in dataIn]
-		return self.debounce(data) 
+		return self._debounce(data) 
 
-	def debounce(lst) -> list:
+	def _debounce(lst) -> list:
 		return [lst[i] for i in range(len(lst)) if i == 0 or lst[i] != lst[i-1]]
 		# old list comprehention below for readability and in case of broken comprehention
 		# result = []
@@ -71,9 +74,6 @@ class MidiDevice:
 	def warning(self, message: str) -> None:	# TODO docstring and comments
 		print(colored(f'WARNING {self.device: 10}: {message}', 'white', 'on_blue'))
 
-
-
-
 class XTouch(MidiDevice):
 	def __init__(self) -> None:
 		super().__init__()
@@ -85,9 +85,9 @@ class XTouch(MidiDevice):
 		self.channelBank = 0
 		self.presetsBank = 0
 		self.mode = 'channel'
-		self.leds = [0 for _ in range(94)]
+		self.leds = [0b0 for _ in range(94)]
 
-		self.encoders = [0 for _ in range(8)]
+		self.encoders = [Encoder(chn) for chn in range(8)]
 
 	# 7-Segment display methods
 	def updateSegmentDisplay(self) -> bool:
@@ -158,7 +158,8 @@ class XTouch(MidiDevice):
 		return self.updateScribbleStrip(display)
 
 	def clearScribbleStrip(self, display: int) -> bool:
-		self.stripsTop, self.stripsBottom = [0x00 for _ in range(8)]
+		self.stripsTop   [display] = [0x00 for _ in range(7)]
+		self.stripsBottom[display] = [0x00 for _ in range(7)]
 		return self.updateScribbleStrip(display)
 	
 	def clearScribbleStrips(self) -> bool:
@@ -192,18 +193,171 @@ class XTouch(MidiDevice):
 
 		return self.updateScribbleStrip(display)
 	
+	# bank and mode methods
+	def updateBank(self, change: int):
+		bank = getattr(self, f'{self.mode}bank')
+		bank += change
+		if self.mode == 'presets':
+			if bank < 0 : bank = 99
+			if bank > 99: bank = 0
+		if self.mode == 'channel':
+			if bank < 0 : bank = 63
+			if bank > 63: bank = 0
+		setattr(self, f'{self.mode}bank', bank)
+		print(f'{self.mode}bank = {bank}')
+		self.setSegmentData(0, f'{bank:02d}')
+
+	def setBankNr(self, number: int, bank: str = None):
+		# if bank specified set that bank to number
+		if bank: setattr(self, f'{bank}bank', 	   number)
+		else:	 setattr(self, f'{self.mode}bank', number)
+
+		self.setSegmentData(0, f'{getattr(self, f"{self.mode}bank"):02d}')
+
+	def updateMode(self, mode: str):
+		if mode in ['channel', 'presets']: 
+			self.mode = mode
+		match self.mode:
+			case 'channel':
+				self.ledOn (86)
+				self.ledOff(87)
+			case 'presets':
+				self.ledOn (87)
+				self.ledOff(86)
+		self.setSegmentData(0, f'{getattr(self, f"{self.mode}bank"):02d}{self.mode:7}')
+	
+	# LED methods
+
+	def ledOn(self, *leds):
+		for led in leds:
+			if led >= 0 and led <= 93:
+				self._sendMidi('note_on', [led+8, 127])
+				self.leds[led] =0b1
+			else:
+				self.warning(f'Button <{led}> is not valid, must be between 0 and 93')
+
+	def ledAllOn(self):
+		for i in range(94):
+			self.ledOn(i)
+
+	def ledOff(self, *leds):
+		for led in leds:
+			if led >= 0 and led <= 93:
+				self._sendMidi('note_on', [led+8, 0])
+				self.leds[led] = 0b0
+			else:
+				self.warning(f'Button <{led}> is not valid, must be between 0 and 93')
+
+	def ledAllOff(self):
+		for i in range(94):
+			self.ledOff(i)
+
+	def ledToggle(self, *leds):
+		for led in leds:
+			self.leds[led] = not self.leds[led]
+			self._sendMidi('note_on', [led+8, self.leds[led] * 127])
+
+	def resetControls(self):
+		for i in range(119):
+			self._sendMidi('note_on', [i, 0])
+			self._sendMidi('control_change', [i, 0])
+	
+	def startUpSequence(self):
+		self.ledAllOn()
+		for i in range(20):
+			self._sendMidi('control_change', [i + 70, 127])
+			time.sleep(.05)
+		self.setSegmentData(0, '0123456789ab')
+		for i, c in enumerate(list(COLORS.keys())[1:]):
+			self.setScibbleStripBacklight(i, c)
+			self.setScribbleStripData(i, 'Display', f'{i}')
+		time.sleep(2)
+		self.resetControls()
+		self.clearSegmentDisplay()
+		self.resetScribbleStrips()
+	
 	# 
 
+class MyDmx3(MidiDevice):
+	def __init__(self) -> None:
+		super().__init__()
+
+	# def togglePreset(self):
+	# 	...
+
+	def setChannel(self, channel, value):
+		self._sendMidi('control_change', [])
+
+
+
+# helper classes
+
+class Encoder:
+	value: int
+	channel: int
+
+	def __init__(self, channel) -> None:
+		self.channel = channel
+		self.value = 0
+
+	def updateValue(self, value):
+		self.value += value
+		
+	def getValue(self):
+		return self.value
+	
+	def __str__(self) -> str:
+		return f'ENCODER instance, channel = {self.channel}, value = {self.value}'
+
+	def __repr__(self) -> str:
+		return f'ENCODER({self.channel}, {self.value})'
+
+def setupMidi() -> tuple:
+	dev_count = pygame.midi.get_count()
+	if dev_count == 0: print('No MIDI devices found, exiting program.'); exit()
+
+	print('Available MIDI devices:')
+	for i in range(dev_count):
+		print(f'[{i:2}] - {pygame.midi.get_device_info(i)[1].decode("utf-8")}')
+	
+	ports = []
+	for port in [('x-touch-in', 'in'), ('x-touch-out', 'out'), ('MyDmx-in (mydmx - python)', 'in'), ('MyDmx-out (python - mydmx)', 'out')]:
+		while True:
+			try:
+				i = int(input(f'Enter index of <{port[0]}>: '))
+				if 0 <= i < dev_count:
+					ports.append(i)
+					break
+				else:
+					print('Invalid MIDI device index. Try again.')
+			except ValueError:
+				print('Invalid index input. Please enter a valid index (integer).')
+	return tuple(ports)
 
 
 
 class Main():
-	def go():
+	def __init__(self) -> None:
+		pass
+
+	def go(self):
 		if platform.system() == 'Windows':
 			from colorama import just_fix_windows_console
 			just_fix_windows_console()
 
+		# args = setupArgparse()
+		# ports = setupMidi()
+
+		pygame.init()
+		pygame.midi.init()
+
+
+		xt = XTouch()
+		xt.connect(1, 6)
+		xt.startUpSequence()
+
 
 
 if __name__ == '__main__':
-	Main.go()
+	main = Main()
+	main.go()
