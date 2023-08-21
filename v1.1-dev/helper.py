@@ -11,6 +11,22 @@ def centerString(string: str, length: int = 7) -> str:
 
 # CONSTANTS
 
+# map buttons to specific functions
+# arguments are also suported, add them as extra values to the tuple
+# as example, map button 92 to "updateBank(1)"
+# 92: ('updateBank', 1)
+BUTTONS = {
+    92: ('updateBank', 1),
+    93: ('updateBank', -1),
+    94: ('updateMode', 'channel'),
+    95: ('updateMode', 'presets'),
+    96: ('pressKey', 'up'),
+    97: ('pressKey', 'down'),
+    98: ('pressKey', 'left'),
+    99: ('pressKey', 'right')
+}
+
+
 # used midi message types
 MIDITYPES = {
 			'note_on': 0x90,
